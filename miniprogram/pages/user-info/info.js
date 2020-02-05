@@ -1,4 +1,4 @@
-// miniprogram/pages/index/index.js
+// miniprogram/pages/user-info/info.js
 Page({
 
   /**
@@ -64,4 +64,3 @@ Page({
 
   }
 })
-
