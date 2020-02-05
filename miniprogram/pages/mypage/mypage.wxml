@@ -11,4 +11,18 @@
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
     </view>
   </view>
+
+  <view class="btn-area">
+    <navigator url="../user-info/info?title=navigate" hover-class="navigator-hover">
+      <button>填写具体信息</button>
+    </navigator>
+
+    <navigator url="../redirect/redirect?title=redirect" open-type="redirect"                             hover-class="other-navigator-hover">
+      <button>ok</button>
+    </navigator>
+  </view>
+
+  <view>
+    
+  </view>
 </view>
