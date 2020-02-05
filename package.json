@@ -1,0 +1,22 @@
+{
+  "name": "ylkf",
+  "version": "1.0.0",
+  "description": "a test mini-program about ylkf",
+  "main": "index.js",
+  "scripts": {
+    "test": "test_it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ninglo/medical-rehabilitation.git"
+  },
+  "keywords": [
+    "ylkf"
+  ],
+  "author": "Ninglo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ninglo/medical-rehabilitation/issues"
+  },
+  "homepage": "https://github.com/Ninglo/medical-rehabilitation#readme"
+}
