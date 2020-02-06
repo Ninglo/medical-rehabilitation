@@ -28,13 +28,9 @@
       },
       {
         "pagePath": "pages/service/service",
-        "text": "service"
-      },
-      {
-        "pagePath": "pages/mypage/mypage",
         "iconPath": "images/icon_API.png",
         "selectedIconPath": "images/icon_API_HL.png",
-        "text": "Me"
+        "text": "service"
       }
     ]
   },

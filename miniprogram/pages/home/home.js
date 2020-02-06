@@ -6,6 +6,7 @@ Page({
    */
   data: {
     title: 'Hello',
+    backStyle: 'home',
     barBg: '#f8f8f8',//#ff6600
     color: '#000000'//#ffffff
   },

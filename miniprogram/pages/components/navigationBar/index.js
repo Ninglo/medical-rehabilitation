@@ -151,6 +151,24 @@ Component({
     /**
      * 返回上一页
      */
+    goToMyPage()
+    {
+      console.log('ok')
+      wx.navigateTo(
+        {
+          url: '../mypage/mypage',
+          success: function() 
+          {
+            console.log('233')
+          },
+          fail: function(e)
+          {
+            console.log(e)
+          }
+        }
+      )
+    },
+
     navigateBack(){
       if (!this.properties.backEvent){
         this.runBack();

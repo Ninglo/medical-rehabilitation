@@ -43,6 +43,17 @@
   text-align: center;
   font-size: 30rpx;
 }
+.style-myPage{
+  display: flex;
+  margin-left: 16rpx;
+  align-items: center;
+}
+.style-myPage .icon-myPage:before { content: "\e624";}
+.style-myPage .back-home{
+  width: auto;
+  text-align: center;
+  font-size: 30rpx;
+}
 .black{
   background: #ffffff;
   border-color:#e5e5e5 !important;

@@ -2,7 +2,11 @@
 	<view class="back" wx:if="{{back}}" style="padding-top:{{paddingTop}}px;height:{{height}}px;line-height:{{height}}px;">
 		<view class="style-simple" wx:if="{{backStyle==='simple'}}">
 			<view class="icon-fanhui icon" bind:tap="navigateBack"></view>
-			<view class="back-home icon" wx:if="{{showHomeButton}}" style="" bind:tap="navigateBackHome">首页</view>
+			<view class="back-home icon" wx:if="{{showHomeButton}}" style="" bind:tap="navigateBackHome"></view>
+		</view>
+		<view class="style-myPage" wx:if="{{backStyle==='home'}}">
+			<view class="icon-myPage icon" bindtap="goToMyPage"></view>
+			<view class="back-home icon" wx:if="{{showHomeButton}}" style="" bind:tap="navigateBackHome"></view>
 		</view>
 		<view class="style-normal {{navigationBarTextStyle}}" wx:if="{{backStyle==='normal'}}">
 			<view class="icon-fanhui icon" bind:tap="navigateBack"></view>
