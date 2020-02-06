@@ -1,4 +1,6 @@
 <view class="container">
+  <navigationBar id="navigationBar" color="{{color}}" title="{{title}}" back="{{false}}" background="{{barBg}}"></navigationBar>
+
   <view class="userinfo">
     <button 
       open-type="getUserInfo" 
@@ -15,7 +17,7 @@
   <text>\n</text>
 
   <view class="btn-area">
-    <navigator url="../user-info/info" hover-class="navigator-hover">
+    <navigator url="../user-info/info?backStyle=simple" hover-class="navigator-hover">
       <button>填写具体信息</button>
     </navigator>
 

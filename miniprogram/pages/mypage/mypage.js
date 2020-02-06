@@ -10,7 +10,10 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    title: 'Hello',
+    barBg: '#f8f8f8',//#ff6600
+    color: '#000000'//#ffffff
   },
 
   onGetOpenid: function () {

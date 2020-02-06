@@ -1,4 +1,6 @@
 <view class="container">
+  <navigationBar id="navigationBar" color="{{color}}" title="{{title}}" back="{{false}}" background="{{barBg}}"></navigationBar>
+
   <swiper class="swiper-index" indicator-dots="true">
     <swiper-item>
       <view class="bc_green">Some pictures.</view>

@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    title: 'Hello',
+    barBg: '#f8f8f8',//#ff6600
+    color: '#000000'//#ffffff
   },
 
   /**
