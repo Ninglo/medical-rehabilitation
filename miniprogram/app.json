@@ -34,5 +34,7 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "navigationBar": "pages/components/navigationBar/index"
+  }
 }

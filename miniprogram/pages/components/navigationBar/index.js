@@ -156,7 +156,7 @@ Component({
       console.log('ok')
       wx.navigateTo(
         {
-          url: '../mypage/mypage',
+          url: '../mypage/mypage?backStyle=simple',
           success: function() 
           {
             console.log('233')
