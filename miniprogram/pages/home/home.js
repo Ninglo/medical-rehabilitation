@@ -1,11 +1,14 @@
-// miniprogram/pages/index/index.js
+// miniprogram/pages/index/home.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    title: 'Hello',
+    backStyle: 'home',
+    barBg: '#f8f8f8',//#ff6600
+    color: '#000000'//#ffffff
   },
 
   /**
@@ -61,7 +64,8 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    wx.showShareMenu({
+      withShareTicket: true
+    })
   }
 })
-

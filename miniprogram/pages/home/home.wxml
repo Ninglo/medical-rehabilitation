@@ -1,0 +1,20 @@
+<view class="container">
+  <navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" fixed="{{fixed}}"  backConfirm="{{backConfirm}}"  backStyle="{{backStyle}}"  backEvent="{{backEvent}}" bind:back="backEvent"  backHomeEvent="{{backHomeEvent}}" bind:backHome="backHomeEvent"></navigationBar>
+  
+  <swiper class="swiper-index" indicator-dots="true">
+    <swiper-item>
+      <view class="bc_green">Some pictures.</view>
+    </swiper-item>
+    <swiper-item>
+      <view class="bc_red">Some pictures.</view>
+    </swiper-item>
+    <swiper-item>
+      <view class="bc_blue">Some pictures.</view>
+    </swiper-item>
+  </swiper>
+
+  <text>\n</text>
+
+  <text>Hello, world!</text>
+  <text>这是首页</text>
+</view>

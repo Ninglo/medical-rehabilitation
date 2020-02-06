@@ -1,0 +1,12 @@
+.lock
+{
+  background: #CCCCCC;
+  color: #FFFFFF;
+  width: 200px;
+  height: 20px;
+}
+
+.lock-text
+{
+  align-items: center;
+}

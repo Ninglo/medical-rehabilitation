@@ -1,15 +1,17 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/home/home",
     "pages/mypage/mypage",
-    "pages/user-info/info"
+    "pages/user-info/info",
+    "pages/test/test",
+    "pages/service/service"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
+    "navigationStyle": "custom",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle":"white"
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",
@@ -19,18 +21,20 @@
     "backgroundColor": "#FFFFFF",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/home/home",
         "iconPath": "images/icon_component.png",
         "selectedIconPath": "images/icon_component_HL.png",
         "text": "Home"
       },
       {
-        "pagePath": "pages/mypage/mypage",
+        "pagePath": "pages/service/service",
         "iconPath": "images/icon_API.png",
         "selectedIconPath": "images/icon_API_HL.png",
-        "text": "Me"
+        "text": "service"
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "navigationBar": "pages/components/navigationBar/index"
+  }
 }

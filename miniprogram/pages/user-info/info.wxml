@@ -1,2 +1,32 @@
-<!--miniprogram/pages/user-info/info.wxml-->
-<text>miniprogram/pages/user-info/info.wxml</text>
+<view>
+  <navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" fixed="{{fixed}}"  backConfirm="{{backConfirm}}"  backStyle="{{backStyle}}"  backEvent="{{backEvent}}" bind:back="backEvent"  backHomeEvent="{{backHomeEvent}}" bind:backHome="backHomeEvent"></navigationBar>
+  <view id="container" bindtouchstart='touchstart' bindtouchmove='touchmove' style='height:200vh;'>
+  	<view style="position:absolute;top:0;left:0;">页面容器</view>
+
+    <!--
+      Page body
+    -->
+    <view>
+      <text>Please input your info.</text>
+
+      <!-- 输入用户信息 -->
+      <view class="page-section">
+        <view class="weui-cells__title">User name</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <input class="weui-input" placeholder="something"/>
+          </view>
+        </view>
+
+        <view class="weui-cells__title">User gender</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <input class="weui-input" placeholder="something"/>
+          </view>
+        </view>
+      </view>
+
+      <button bindtap="tapSaveBtn" class="weui-button">Save</button>
+    </view>
+  </view>
+</view>
