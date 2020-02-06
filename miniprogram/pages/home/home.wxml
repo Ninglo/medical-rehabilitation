@@ -17,4 +17,13 @@
 
   <text>Hello, world!</text>
   <text>这是首页</text>
+
+  <view class="lock">
+    <text>Self Test</text>
+  </view>
+  <button id="master" bindtap = "toChatRoom">sb</button>
+
+  <view class="lock">
+    <text></text>
+  </view>
 </view>

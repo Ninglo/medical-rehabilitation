@@ -5,16 +5,24 @@
     <view class="userinfo">
       <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})" size="default"></button>
       <view class="userinfo-nickname-wrapper">
-        <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+        <button class="userinfo-nickname" open-type="getUserInfo" bindgetuserinfo="onGetOpenid" wx:if="{{!userData}}">
+          点击获取 openid
+        </button>
+        <text wx:if="{{userData}}">{{userData.nickName}}</text>
       </view>
     </view>
+
     <text>\n</text>
+
     <view class="btn-area">
-      <navigator url="../user-info/info?backStyle=normal" hover-class="navigator-hover">
+      <navigator url="user-info/info?backStyle=normal" hover-class="navigator-hover">
         <button>填写具体信息</button>
       </navigator>
       <navigator url="../test/test?backStyle=normal" open-type="redirect" hover-class="other-navigator-hover">
         <button>Another</button>
+      </navigator>
+      <navigator url="settings/settings?backStyle=normal">
+        <button>Settings</button>
       </navigator>
     </view>
   </view>

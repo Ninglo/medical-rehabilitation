@@ -13,8 +13,23 @@ Page({
     toggleBarShow: false,
     backStyle: 'normal',
     backEvent: false,
-    backHomeEvent: false
+    backHomeEvent: false,
+    userData : false,
+    avatarUrl: 'user-unlogin.png'
   },
+
+  onGetOpenid: function(res)
+  {
+    console.log(`nickName: ${res.detail.userInfo.nickName}`)
+    app.globalData.userData = res.detail.userInfo
+    this.setData(
+      {
+        userData: res.detail.userInfo,
+        avatarUrl: res.detail.userInfo.avatarUrl
+      }
+    )
+  },
+
   onLoad: function (options) {
     console.log(options);
     var obj = {};
@@ -38,6 +53,16 @@ Page({
       obj.backEvent = true;
     }
     this.setData(obj);
+    if (app.globalData.userData != false)
+    {
+      this.setData(
+        {
+          userData: app.globalData.userData,
+          avatarUrl: app.globalData.userData.avatarUrl
+        }
+      )
+      console.log(`avatarUrl: ${this.data.avatarUrl}`)
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

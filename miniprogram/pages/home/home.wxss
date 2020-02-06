@@ -15,3 +15,16 @@
 .bc_green {background: green;width:300px; height: 100px;}
 .bc_red {background: red;width:300px; height: 100px;}
 .bc_blue {background: blue;width:300px; height: 100px;}
+
+.lock
+{
+  background: #CCCCCC;
+  color: #FFFFFF;
+  width: 200px;
+  height: 20px;
+}
+
+.lock-text
+{
+  align-items: center;
+}

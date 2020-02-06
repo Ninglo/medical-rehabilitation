@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Ninglo/medical-rehabilitation/issues"
   },
-  "homepage": "https://github.com/Ninglo/medical-rehabilitation#readme"
+  "homepage": "https://github.com/Ninglo/medical-rehabilitation#readme",
+  "dependencies": {
+    "wx-server-sdk": "^1.8.0"
+  }
 }
