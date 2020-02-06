@@ -22,7 +22,7 @@ Page({
         console.log('[云函数] [login] user openid: ', res.result.openid)
         app.globalData.openid = res.result.openid
         wx.navigateTo({
-          url: '../userConsole/userConsole',
+          url: '../test/test',
         })
       },
       fail: err => {

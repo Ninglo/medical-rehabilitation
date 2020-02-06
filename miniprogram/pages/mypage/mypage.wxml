@@ -12,13 +12,16 @@
     </view>
   </view>
 
+  <text>\n</text>
+
   <view class="btn-area">
-    <navigator url="../user-info/info?title=navigate" hover-class="navigator-hover">
+    <navigator url="../user-info/info" hover-class="navigator-hover">
       <button>填写具体信息</button>
     </navigator>
 
-    <navigator url="../redirect/redirect?title=redirect" open-type="redirect"                             hover-class="other-navigator-hover">
-      <button>ok</button>
+    <navigator url="../test/test" open-type="redirect"
+    hover-class="other-navigator-hover">
+      <button>Another</button>
     </navigator>
   </view>
 

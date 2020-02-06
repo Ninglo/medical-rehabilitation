@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/home/home",
     "pages/mypage/mypage",
-    "pages/user-info/info"
+    "pages/user-info/info",
+    "pages/test/test",
+    "pages/service/service"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -19,10 +21,14 @@
     "backgroundColor": "#FFFFFF",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/home/home",
         "iconPath": "images/icon_component.png",
         "selectedIconPath": "images/icon_component_HL.png",
         "text": "Home"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "service"
       },
       {
         "pagePath": "pages/mypage/mypage",

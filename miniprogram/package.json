@@ -1,17 +1,18 @@
 {
-  "name": "ylkf",
+  "name": "miniprogram",
   "version": "1.0.0",
-  "description": "a test mini-program about ylkf",
-  "main": "index.js",
+  "description": "The medical rehabilitation app create by CPUers.",
+  "main": "app.js",
   "scripts": {
-    "test": "test_it"
+    "test": "app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ninglo/medical-rehabilitation.git"
+    "url": "git+ssh://git@github.com/Ninglo/medical-rehabilitation.git"
   },
   "keywords": [
-    "ylkf"
+    "Medical",
+    "Rehabilitation"
   ],
   "author": "Ninglo",
   "license": "ISC",

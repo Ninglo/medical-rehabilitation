@@ -1,0 +1,18 @@
+<view class="container">
+  <swiper class="swiper-index" indicator-dots="true">
+    <swiper-item>
+      <view class="bc_green">Some pictures.</view>
+    </swiper-item>
+    <swiper-item>
+      <view class="bc_red">Some pictures.</view>
+    </swiper-item>
+    <swiper-item>
+      <view class="bc_blue">Some pictures.</view>
+    </swiper-item>
+  </swiper>
+
+  <text>\n</text>
+
+  <text>Hello, world!</text>
+  <text>这是首页</text>
+</view>

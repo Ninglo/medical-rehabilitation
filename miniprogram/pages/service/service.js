@@ -1,4 +1,4 @@
-// miniprogram/pages/index/index.js
+// miniprogram/pages/service/service.js
 Page({
 
   /**
@@ -64,4 +64,3 @@ Page({
 
   }
 })
-

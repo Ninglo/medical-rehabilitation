@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="lock">
+    <text>Self Test</text>
+  </view>
+</view>
