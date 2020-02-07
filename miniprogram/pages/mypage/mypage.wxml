@@ -1,29 +1,40 @@
-<view class="container">
-  <navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" fixed="{{fixed}}" backConfirm="{{backConfirm}}" backStyle="{{backStyle}}" backEvent="{{backEvent}}" bind:back="backEvent" backHomeEvent="{{backHomeEvent}}" bind:backHome="backHomeEvent"></navigationBar>
-  <view id="container" bindtouchstart='touchstart' bindtouchmove='touchmove' style='height:200vh;'>
-    <view style="position:absolute;top:0;left:0;">页面容器</view>
-    <view class="userinfo">
-      <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})" size="default"></button>
-      <view class="userinfo-nickname-wrapper">
-        <button class="userinfo-nickname" open-type="getUserInfo" bindgetuserinfo="onGetOpenid" wx:if="{{!userData}}">
-          点击获取 openid
-        </button>
-        <text wx:if="{{userData}}">{{userData.nickName}}</text>
-      </view>
-    </view>
-
-    <text>\n</text>
-
-    <view class="btn-area">
-      <navigator url="user-info/info?backStyle=normal" hover-class="navigator-hover">
-        <button>填写具体信息</button>
-      </navigator>
-      <navigator url="../test/test?backStyle=normal" open-type="redirect" hover-class="other-navigator-hover">
-        <button>Another</button>
-      </navigator>
-      <navigator url="settings/settings?backStyle=normal">
-        <button>Settings</button>
-      </navigator>
-    </view>
+<navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" fixed="{{fixed}}" backConfirm="{{backConfirm}}" backStyle="{{backStyle}}" backEvent="{{backEvent}}" bind:back="backEvent" backHomeEvent="{{backHomeEvent}}" bind:backHome="backHomeEvent"></navigationBar>
+<view class="userinfo">
+  <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})" size="default"></button>
+  <view class="userinfo-nickname-wrapper">
+    <button class="userinfo-nickname" open-type="getUserInfo" bindgetuserinfo="onGetOpenid" wx:if="{{!userData}}">
+      点击获取 openid
+    </button>
+    <text wx:if="{{userData}}">{{userData.nickName}}</text>
   </view>
+</view>
+<text>\n</text>
+<view class="btn-area">
+  <navigator url="user-info/info?backStyle=normal" hover-class="navigator-hover">
+    <button>填写具体信息</button>
+  </navigator>
+  <navigator url="../test/test?backStyle=normal" open-type="redirect" hover-class="other-navigator-hover">
+    <button>Another</button>
+  </navigator>
+  <navigator url="settings/settings?backStyle=normal">
+    <button>Settings</button>
+  </navigator>
+</view>
+<view class="weui-cells__title">带跳转的列表项</view>
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="/pages/mypage/user-info/info?backStyle=normal" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">请输入个人资料</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="/pages/test/test?backStyle=normal" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">Test</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<text>\n</text>
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="/pages/mypage/settings/settings?backStyle=normal" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">设置</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
 </view>

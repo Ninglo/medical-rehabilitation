@@ -9,7 +9,8 @@ Component(
         type: Boolean,
         value: false
       },
-      background: {
+      background:
+      {
         //导航栏背景色
         type: String,
         value: '#ffffff', //默认
@@ -241,7 +242,6 @@ Component(
           {}
         )
       },
-
       goToMyPage ()
       {
         console.log('ok')
@@ -256,7 +256,6 @@ Component(
           }
         )
       },
-
       navigateBack ()
       {
         if (!this.properties.backEvent)

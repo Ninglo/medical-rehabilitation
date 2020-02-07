@@ -1,15 +1,15 @@
 {
-  "pages": 
-  [
+  "pages": [
     "pages/home/home",
     "pages/mypage/mypage",
     "pages/mypage/user-info/info",
     "pages/test/test",
     "pages/service/service",
-    "pages/mypage/settings/settings"
+    "pages/mypage/settings/settings",
+    "pages/service/chatroom/chatroom",
+    "pages/class/video"
   ],
-  "window": 
-  {
+  "window": {
     "backgroundColor": "#F6F6F6",
     "navigationStyle": "custom",
     "backgroundTextStyle": "light",
@@ -18,13 +18,11 @@
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",
-  "tabBar": 
-  {
+  "tabBar": {
     "color": "#000000",
     "selectedColor": "#000000",
     "backgroundColor": "#FFFFFF",
-    "list": 
-    [
+    "list": [
       {
         "pagePath": "pages/home/home",
         "iconPath": "images/icon_component.png",
@@ -39,8 +37,7 @@
       }
     ]
   },
-  "usingComponents": 
-  {
+  "usingComponents": {
     "navigationBar": "components/navigationBar/index",
     "dropdownmenu": "components/dropdownmenu/dropdownmenu"
   }
