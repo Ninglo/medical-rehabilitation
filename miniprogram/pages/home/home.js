@@ -1,59 +1,47 @@
-// miniprogram/pages/index/home.js
-Page({
+const app =  getApp()
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    title: 'Hello',
-    backStyle: 'home',
+Page(
+{
+  data: 
+  {
+    className: '',  // 课程标题
+    backStyle: 'home',  // 设置导航栏格式
     barBg: '#f8f8f8', //#ff6600
     color: '#000000', //#ffffff
-    arrow: '↓',
+    menuArrow: '↓',
     showIt: false,
-    dropDownMenuTitle: ['区域', '来源', '租售', '排序'],
-    data1: [
+    classMenuTitle: ['nihao'],
+    classData: 
+    [
       {
-        id: 0, title: '不限',
+        id: 0,
+        title: '脑部疾病',
+        childModel:
+        [
+          { id: '0-1', title: '脑病1' },
+          { id: '0-2', title: '脑病2' }
+        ]
       },
       {
-        id: 1, title: '道里区',
-        childModel: [
-          { id: '1-1', title: '中央大街' },
-          { id: '1-2', title: '埃德蒙顿路' }]
-      },
-      {
-        id: 2, title: '南岗区',
-        childModel: [
-          { id: '2-1', title: '果戈里' },
-          { id: '2-2', title: '通达街' }]
-      },
-      {
-        id: 3, title: '松北区',
-        childModel: [
-          { id: '3-1', title: '世茂大道' },
-          { id: '3-2', title: '市政府' }]
+        id: 1,
+        title: '心血管疾病',
+        childModel: 
+        [
+          { id: '1-1', title: '血病1' },
+          { id: '1-2', title: '血病2' }
+        ]
       }
-    ],
-    data2: [
-      { id: 1, title: '个人房源' },
-      { id: 2, title: '经纪人房源' }],
-    data3: [
-      { id: 1, title: '出租' },
-      { id: 2, title: '出售' }],
-    data4: [
-      { id: 1, title: '智能排序' }, { id: 2, title: '发布时间' }, { id: 3, title: '距离优先' }
-      ],
+    ]
   },
 
   getData: function (res)
   {
     console.log(`res.detail.click: ${res.detail.click}`)
-    var arrow = (this.data.arrow === '↓') ? '↑' : '↓'
+    var menuArrow = (this.data.menuArrow === '↓') ? '↑' : '↓'
     this.setData(
       {
         showIt: !this.data.showIt,
-        arrow: arrow
+        menuArrow: menuArrow
       }
     )
   },
@@ -61,12 +49,12 @@ Page({
   selectedItem: function(res)
   {
     console.log(res.detail)
-    var arrow = (this.data.arrow === '↓') ? '↑' : '↓'
+    var menuArrow = (this.data.menuArrow === '↓') ? '↑' : '↓'
     this.setData(
       {
         showIt: !this.data.showIt,
-        arrow: arrow,
-        title: res.detail.selectedTitle
+        menuArrow: menuArrow,
+        className: res.detail.selectedTitle
       }
     )
   },
@@ -74,10 +62,9 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    wx.getUserInfo({
-      
-    })
+  onLoad: function (options) 
+  {
+    // 调用云函数
     wx.cloud.callFunction(
       {
         name: 'readData',
@@ -87,6 +74,13 @@ Page({
         },
         fail: console.error
       },
+    )
+
+    // 初始化数据
+    this.setData(  
+      {
+        className: app.globalData.className
+      }
     )
   },
 
