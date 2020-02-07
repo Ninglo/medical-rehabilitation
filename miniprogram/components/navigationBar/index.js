@@ -116,7 +116,47 @@ Component({
     paddingTop: 20,//导航栏上内边距对应状态栏高度
     showHomeButton: false,//是否显示返回首页
     show: true,//是否显示导航栏
-    navigationBarTextStyle: 'black'
+    navigationBarTextStyle: 'black',
+    arrow: '↓',
+    arrow_index: 0,
+    dropDownMenuTitle: ['疾病选择'],
+    data1: [
+      {
+        id: 0, title: '不限',
+      },
+      {
+        id: 1, title: '脑部',
+        childModel: [
+          { id: '1-1', title: '某些' },
+          { id: '1-2', title: '脑部肿瘤' }]
+      },
+      {
+        id: 2, title: '心血管',
+        childModel: [
+          { id: '2-1', title: '心脏' },
+          { id: '2-2', title: '血管' }]
+      },
+      {
+        id: 3, title: '心理',
+        childModel: [
+          { id: '3-1', title: '抑郁' },
+          { id: '3-2', title: '其他' }]
+      }
+    ]
+  },
+  // 点击下拉显示框
+  selectTap() {
+    this.setData({
+      selectShow: !this.data.selectShow
+    });
+  },
+  // 点击下拉列表
+  optionTap(e) {
+    let Index = e.currentTarget.dataset.index;//获取点击的下拉列表的下标
+    this.setData({
+      index: Index,
+      selectShow: !this.data.selectShow
+    });
   },
   attached: function(option){
     //检测首页是否在当前页面栈中
@@ -151,6 +191,19 @@ Component({
     /**
      * 返回上一页
      */
+    choiceText()
+    {
+      var arrow_index = this.data.arrow_index
+      arrow_index = (arrow_index == 1) ? 0 : 1
+      var arrow_list = ['↓', '↑']
+      this.setData(
+        {
+          arrow: arrow_list[arrow_index],
+          arrow_index: arrow_index
+        }
+      )
+    },
+
     goToMyPage()
     {
       console.log('ok')

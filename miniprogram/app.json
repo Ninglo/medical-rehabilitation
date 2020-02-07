@@ -36,6 +36,7 @@
     ]
   },
   "usingComponents": {
-    "navigationBar": "components/navigationBar/index"
+    "navigationBar": "components/navigationBar/index",
+    "dropdownmenu": "components/dropdownmenu/dropdownmenu"
   }
 }

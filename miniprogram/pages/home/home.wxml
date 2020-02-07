@@ -1,5 +1,11 @@
+<dropdownmenu dropDownMenuTitle='{{dropDownMenuTitle}}' dropDownMenuDistrictData='{{data1}}' dropDownMenuSourceData='{{data2}}' dropDownMenuStyleData='{{data3}}' dropDownMenuFilterData='{{data4}}'
+  bind:selectedItem='selectedItem' />
+
 <view class="container">
   <navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" fixed="{{fixed}}"  backConfirm="{{backConfirm}}"  backStyle="{{backStyle}}"  backEvent="{{backEvent}}" bind:back="backEvent"  backHomeEvent="{{backHomeEvent}}" bind:backHome="backHomeEvent"></navigationBar>
+
+  <!--index.wxml-->
+  
   
   <swiper class="swiper-index" indicator-dots="true">
     <swiper-item>
@@ -24,6 +30,6 @@
   <button id="master" bindtap = "toChatRoom">sb</button>
 
   <view class="lock">
-    <text></text>
+    <text>Another</text>
   </view>
 </view>

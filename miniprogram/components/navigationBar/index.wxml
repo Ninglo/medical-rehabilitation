@@ -6,7 +6,6 @@
 		</view>
 		<view class="style-myPage" wx:if="{{backStyle==='home'}}">
 			<view class="icon-myPage icon" bindtap="goToMyPage"></view>
-			<view class="back-home icon" wx:if="{{showHomeButton}}" style="" bind:tap="navigateBackHome"></view>
 		</view>
 		<view class="style-normal {{navigationBarTextStyle}}" wx:if="{{backStyle==='normal'}}">
 			<view class="icon-fanhui icon" bind:tap="navigateBack"></view>
@@ -14,6 +13,13 @@
 			<view class="back-home icon" style="" bind:tap="navigateBackHome"></view>
 		</view>
 	</view>
-	<view class="title">{{title!='none'?title:''}}</view>
+
+  
+	<view class="title">
+    <view class="icon-myPage icon" bindtap="choiceText" wx:if="{{backStyle==='home'}}">
+      {{arrow}}
+    </view><!-- 这个是下拉菜单 -->
+      {{title!='none'?title:''}}
+  </view>
 </view>
 <view class="navigation-bar-holder" wx:if="{{fixed && show}}" style="background:{{placeholderBg}};padding-top:{{paddingTop}}px;height:{{height}}px;line-height:{{height}}px;width:750rpx;"></view>

@@ -1,106 +1,55 @@
+// pages/index/menu.js
+const app = getApp()
 Page({
-  /**
-   * 页面的初始数据
-   */
   data: {
-    title: '子页面',
-    barBg: '#f8f8f8',//#ff6600
-    fixed: true,
-    color: '#000000',//#ffffff
-    touchStartY: 0,//触摸开始的Y坐标
-    toggleBarShow: false,
-    backStyle: 'normal',
-    backEvent: false,
-    backHomeEvent: false
+    dropDownMenuTitle: ['区域', '来源', '租售', '排序'],
+    data1: [
+      {
+        id: 0, title: '不限',
+      },
+      {
+        id: 1, title: '道里区',
+        childModel: [
+          { id: '1-1', title: '中央大街' },
+          { id: '1-2', title: '埃德蒙顿路' }]
+      },
+      {
+        id: 2, title: '南岗区',
+        childModel: [
+          { id: '2-1', title: '果戈里' },
+          { id: '2-2', title: '通达街' }]
+      },
+      {
+        id: 3, title: '松北区',
+        childModel: [
+          { id: '3-1', title: '世茂大道' },
+          { id: '3-2', title: '市政府' }]
+      }
+    ],
+    data2: [
+      { id: 1, title: '个人房源' },
+      { id: 2, title: '经纪人房源' }],
+    data3: [
+      { id: 1, title: '出租' },
+      { id: 2, title: '出售' }],
+    data4: [
+      { id: 1, title: '智能排序' }, { id: 2, title: '发布时间' }, { id: 3, title: '距离优先' }
+    ],
   },
-  onLoad: function (options) {
-    console.log(options);
-    var obj = {};
-    console.log(obj);
-    if(options.title){
-      obj.title = options.title
-    }
-    if(options.nofixed){
-      obj.fixed = false
-    }
-    if(options.toggleBarShow){
-      obj.toggleBarShow = true;
-    }
-    if (options.backStyle) {
-      obj.backStyle = options.backStyle;
-    }
-    if (options.backHomeEvent) {
-      obj.backHomeEvent = true;
-    }
-    if (options.backEvent) {
-      obj.backEvent = true;
-    }
-    this.setData(obj);
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
-  touchstart(e) {
-    // this.data.touchStartY = e.changedTouches[0].clientY;
-    this.setData({ touchStartY: e.changedTouches[0].clientY });
-  },
-  touchmove(e) {
-    if(!this.data.toggleBarShow){
-    	return;
-    }
-    console.log(this.data.touchStartY - e.changedTouches[0].clientY, e.changedTouches[0].clientY);
-    if ((e.changedTouches[0].clientY - this.data.touchStartY) > 0 && (e.changedTouches[0].clientY - this.data.touchStartY) > 3) {//向上滚动
-      this.selectComponent("#navigationBar").toggleShow();
-    }
-    if ((e.changedTouches[0].clientY - this.data.touchStartY) < 0 && (this.data.touchStartY - e.changedTouches[0].clientY) > 30) {//向下滚动
-      this.selectComponent("#navigationBar").toggleHide();
-    }
-  },
-  onPageScroll(e){
-    // console.log(e.scrollTop, e.scrollTop - this.data.touchStartY);
-   if (e.scrollTop < 10) {//判断向上滚动顶部
-      // this.setData({ touchStartY: e.scrollTop });
-      this.selectComponent("#navigationBar").toggleShow();
-    }
+  onLoad: function () {
 
   },
-  onShareAppMessage(res){
-    return {
-      title: '分享标题',
-      path: '/exmaple/child?title=来自分享页'
-    }
-  },
   /**
-   * 返回按钮触发事件
-   * @param {Object} e 事件对象
-   */
-  backEvent(e){
-    // 这里可以写点击返回按钮相关的业务逻辑，下面逻辑提供参考
-    let self = this;
-    wx.showModal({
-      title: '提示，触发返回按钮事件',
-      content: '确定要退出当前页面吗？',
-      success(res) {
-        res.confirm && self.selectComponent('#navigationBar').runBack();//这里之所以调用了组件内部的返回上一页的方法，因为里面有判断逻辑，不想调用可以自行处理
-      }
-    })
+* 生命周期函数--监听页面初次渲染完成
+*/
+  onReady: function () {
+
   },
-  /**
-   * 返回按钮触发事件
-   * @param {Object} e 事件对象
-   */
-  backHomeEvent(e) {
-    // 这里可以写点击返回首页按钮相关的业务逻辑，下面逻辑提供参考
-    let self = this;
-    wx.showModal({
-      title: '提示，触发返回首页按钮事件',
-      content: '确定要退出当前页面吗？',
-      success(res) {
-        res.confirm && self.selectComponent('#navigationBar').runBackHome();//这里之所以调用了组件内部的返回首页的方法，因为里面有判断逻辑，不想调用可以自行处理
-      }
-    })
-  }
-});
+  selectedItem: function (e) {
+    console.log('id --' + e.detail.selectedId + "cityname = " + e.detail.selectedTitle);
+  },
+  showDialog: function (e) {
+
+  },
+
+})
