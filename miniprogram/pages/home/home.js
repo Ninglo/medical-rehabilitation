@@ -1,21 +1,87 @@
-// miniprogram/pages/index/home.js
-Page({
+const app =  getApp()
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    title: 'Hello',
-    backStyle: 'home',
-    barBg: '#f8f8f8',//#ff6600
-    color: '#000000'//#ffffff
+Page(
+{
+  data: 
+  {
+    className: '',  // 课程标题
+    backStyle: 'home',  // 设置导航栏格式
+    barBg: '#f8f8f8', //#ff6600
+    color: '#000000', //#ffffff
+    menuArrow: '↓',
+    showIt: false,
+    classMenuTitle: ['nihao'],
+    classData: 
+    [
+      {
+        id: 0,
+        title: '脑部疾病',
+        childModel:
+        [
+          { id: '0-1', title: '脑病1' },
+          { id: '0-2', title: '脑病2' }
+        ]
+      },
+      {
+        id: 1,
+        title: '心血管疾病',
+        childModel: 
+        [
+          { id: '1-1', title: '血病1' },
+          { id: '1-2', title: '血病2' }
+        ]
+      }
+    ]
+  },
+
+  getData: function (res)
+  {
+    console.log(`res.detail.click: ${res.detail.click}`)
+    var menuArrow = (this.data.menuArrow === '↓') ? '↑' : '↓'
+    this.setData(
+      {
+        showIt: !this.data.showIt,
+        menuArrow: menuArrow
+      }
+    )
+  },
+
+  selectedItem: function(res)
+  {
+    console.log(res.detail)
+    var menuArrow = (this.data.menuArrow === '↓') ? '↑' : '↓'
+    this.setData(
+      {
+        showIt: !this.data.showIt,
+        menuArrow: menuArrow,
+        className: res.detail.selectedTitle
+      }
+    )
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (options) 
+  {
+    // 调用云函数
+    wx.cloud.callFunction(
+      {
+        name: 'readData',
+        success: function(res)
+        {
+          console.log(res)
+        },
+        fail: console.error
+      },
+    )
 
+    // 初始化数据
+    this.setData(  
+      {
+        className: app.globalData.className
+      }
+    )
   },
 
   /**

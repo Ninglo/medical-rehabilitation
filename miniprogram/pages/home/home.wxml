@@ -1,6 +1,18 @@
+<navigationBar id="navigationBar" arrow="{{menuArrow}}" bind:arrowClick="getData" 
+ placeholderBg="" color="{{color}}" title="{{className}}" back="{{true}}" 
+ background="{{barBg}}" fixed="{{fixed}}"  backConfirm="{{backConfirm}}"  
+ backStyle="{{backStyle}}"  backEvent="{{backEvent}}" bind:back="backEvent"  
+ backHomeEvent="{{backHomeEvent}}" bind:backHome="backHomeEvent">
+</navigationBar>
+
+<dropdownmenu districtOpen="{{showIt}}" dropDownMenuTitle="{{dropDownMenuTitle}}"
+ dropDownMenuDistrictData="{{classData}}" dropDownMenuSourceData="{{data2}}" 
+ dropDownMenuStyleData="{{data3}}" dropDownMenuFilterData="{{data4}}"
+ bind:selectedItem="selectedItem">
+</dropdownmenu>
+
 <view class="container">
-  <navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" fixed="{{fixed}}"  backConfirm="{{backConfirm}}"  backStyle="{{backStyle}}"  backEvent="{{backEvent}}" bind:back="backEvent"  backHomeEvent="{{backHomeEvent}}" bind:backHome="backHomeEvent"></navigationBar>
-  
+  <!-- 首页顶部的滚动图片展示 -->
   <swiper class="swiper-index" indicator-dots="true">
     <swiper-item>
       <view class="bc_green">Some pictures.</view>
@@ -17,4 +29,13 @@
 
   <text>Hello, world!</text>
   <text>这是首页</text>
+
+  <view class="lock">
+    <text>Self Test</text>
+  </view>
+  <button id="master" bindtap = "toChatRoom">sb</button>
+
+  <view class="lock">
+    <text>Another</text>
+  </view>
 </view>

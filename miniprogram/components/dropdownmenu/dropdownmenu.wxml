@@ -1,0 +1,42 @@
+
+
+<view class="district {{districtOpen ? 'show' : 'disappear'}} ">
+  <view class="half half-left">
+    <view class="{{district_left_select == item.id ? 'current_left_select' : ''}}" wx:for="{{dropDownMenuDistrictData}}" bindtap="selectDistrictLeft" data-model='{{item}}' wx:key="unique">
+      {{item.title}}
+    </view>
+  </view>
+  <view class="half half-right">
+    <view class="{{district_right_select == item.id ? 'current_right_select' : ''}}" wx:for="{{dropDownMenuDistrictDataRight}}" bindtap="selectDistrictRight" data-model='{{item}}' wx:key="unique">
+      {{item.title}}
+    </view>
+  </view>
+</view>
+
+<view class="container container_hd {{source_open ? 'show' : 'disappear'}} ">
+  <view class='z-height'>
+    <view>
+      <block wx:for="{{dropDownMenuSourceData}}" wx:key="unique">
+        <view class="sortitem {{selected_source_id==item.id ? ' active ' : ' '}}" data-model='{{item}}' bindtap='selectSourceItem'> {{item.title}}</view>
+      </block>
+    </view>
+  </view>
+</view>
+<view class="container container_hd {{style_open ? 'show' : 'disappear'}} ">
+  <view class='z-height'>
+    <view>
+      <block wx:for="{{dropDownMenuStyleData}}" wx:key="unique">
+        <view class="sortitem {{selected_style_id==item.id ? ' active ' : ' '}}" data-model='{{item}}' bindtap='selectStyleItem'> {{item.title}}</view>
+      </block>
+    </view>
+  </view>
+</view>
+<view class="container container_hd {{filter_open ? 'show' : 'disappear'}} ">
+  <view class='z-height'>
+    <view>
+      <block wx:for="{{dropDownMenuFilterData}}" wx:key="unique">
+        <view class="sortitem {{selected_filter_id==item.id ? ' active ' : ' '}}" data-model='{{item}}' bindtap='selectFilterItem'> {{item.title}}</view>
+      </block>
+    </view>
+  </view>
+</view>

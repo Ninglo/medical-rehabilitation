@@ -1,25 +1,30 @@
 {
-  "pages": [
+  "pages": 
+  [
     "pages/home/home",
     "pages/mypage/mypage",
-    "pages/user-info/info",
+    "pages/mypage/user-info/info",
     "pages/test/test",
-    "pages/service/service"
+    "pages/service/service",
+    "pages/mypage/settings/settings"
   ],
-  "window": {
+  "window": 
+  {
     "backgroundColor": "#F6F6F6",
     "navigationStyle": "custom",
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",
-  "tabBar": {
+  "tabBar": 
+  {
     "color": "#000000",
     "selectedColor": "#000000",
     "backgroundColor": "#FFFFFF",
-    "list": [
+    "list": 
+    [
       {
         "pagePath": "pages/home/home",
         "iconPath": "images/icon_component.png",
@@ -34,7 +39,9 @@
       }
     ]
   },
-  "usingComponents": {
-    "navigationBar": "pages/components/navigationBar/index"
+  "usingComponents": 
+  {
+    "navigationBar": "components/navigationBar/index",
+    "dropdownmenu": "components/dropdownmenu/dropdownmenu"
   }
 }
