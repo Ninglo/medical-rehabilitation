@@ -76,7 +76,8 @@ Component({
     backStyle: {//导航栏返回按钮的风格
       type: String,
       value: 'normal', //默认值 可赋值simple或者normal
-      observer: function (newVal, oldVal, changedPath) {
+      observer: function (newVal, oldVal, changedPath) 
+      {
         // console.log(newVal,oldVal,changedPath);
         if (!newVal) {
           let obj = {};
@@ -109,6 +110,11 @@ Component({
         }
       }
     },
+    arrow: 
+    {
+      type: String,
+      value: '↓'
+    }
   },
   data: {
     // 这里是一些组件内部数据
@@ -117,8 +123,6 @@ Component({
     showHomeButton: false,//是否显示返回首页
     show: true,//是否显示导航栏
     navigationBarTextStyle: 'black',
-    arrow: '↓',
-    arrow_index: 0,
     dropDownMenuTitle: ['疾病选择'],
     data1: [
       {
@@ -201,6 +205,13 @@ Component({
           arrow: arrow_list[arrow_index],
           arrow_index: arrow_index
         }
+      )
+      this.triggerEvent(
+        'arrowClick', 
+        {
+          click: true
+        },
+        {}
       )
     },
 

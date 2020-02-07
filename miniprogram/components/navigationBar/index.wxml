@@ -14,7 +14,7 @@
 		</view>
 	</view>
 
-  
+
 	<view class="title">
     <view class="icon-myPage icon" bindtap="choiceText" wx:if="{{backStyle==='home'}}">
       {{arrow}}

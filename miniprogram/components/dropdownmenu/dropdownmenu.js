@@ -21,10 +21,14 @@ Component({
       type: Array,
       value: []
     },
+    districtOpen: {
+      type: Boolean,
+      value: false
+    }
   },
   data: {
     // private properity
-    district_open: false, // 区域
+    //district_open: false, // 区域
     source_open: false, // 来源
     style_open: false, // 出租 出售
     filteropen: false,  // 筛选
@@ -41,7 +45,6 @@ Component({
     selected_filter_name: ''
   },
   methods: {
-    
     tapDistrictNav: function (e) {
       if (this.data.district_open) {
         this.setData({
