@@ -6,14 +6,26 @@
   "scripts": {
     "precommit": "lint-staged"
   },
-  "lint-staged": {
-    "src/**/*.js": "eslint"
-  },
-  "hasky": {
+  "husky": {
     "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint --fix --syntax scss",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
