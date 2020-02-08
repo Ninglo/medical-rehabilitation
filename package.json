@@ -1,0 +1,38 @@
+{
+  "name": "medical-rehabilitation",
+  "version": "0.1.0",
+  "description": "A wechat APP about medical-rehabilitation.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Ninglo/medical-rehabilitation.git"
+  },
+  "keywords": [
+    "Wechat-App",
+    "medical",
+    "rehabilitation"
+  ],
+  "author": "Ninglo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ninglo/medical-rehabilitation/issues"
+  },
+  "homepage": "https://github.com/Ninglo/medical-rehabilitation#readme",
+  "devDependencies": {
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "prettier": "1.19.1",
+    "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md,wxss,wxml}": "prettier --write"
+  }
+}
