@@ -4,7 +4,10 @@
   "description": "The medical rehabilitation app create by CPUers.",
   "main": "app.js",
   "scripts": {
-    "test": "app.js"
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.js": "eslint"
   },
   "hasky": {
     "hooks": {
