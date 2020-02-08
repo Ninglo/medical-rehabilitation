@@ -9,7 +9,18 @@ Page(
       backStyle: 'home',
       barBg: '#f8f8f8',//#ff6600
       color: '#000000', //#ffffff
+      listLen: 1,
       list: [
+        {
+          url: `/pages/service/chatroom/chatroom?docter=sb`,
+          title: 'Hello',
+          text: 'sb'
+        },
+        {
+          url: `/pages/service/chatroom/chatroom?docter=sb`,
+          title: 'Hello',
+          text: 'sb'
+        },
         {
           url: `/pages/service/chatroom/chatroom?docter=sb`,
           title: 'Hello',
@@ -57,7 +68,16 @@ Page(
         { id: 1, title: '智能排序' }, { id: 2, title: '发布时间' }, { id: 3, title: '距离优先' }
       ],
     },
-
+    viewMore: function ()
+    {
+      var listLen = this.data.listLen + 1
+      console.log(listLen)
+      this.setData(
+        {
+          listLen: listLen
+        }
+      )
+    },
     /**
      * 生命周期函数--监听页面加载
      */
