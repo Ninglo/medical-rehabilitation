@@ -7,7 +7,10 @@
     "pages/service/service",
     "pages/mypage/settings/settings",
     "pages/service/chatroom/chatroom",
-    "pages/class/video"
+    "pages/questionnaire/questionnaire",
+    "pages/course/course",
+    "pages/course/detail/detail",
+    "pages/course/detail/video",
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

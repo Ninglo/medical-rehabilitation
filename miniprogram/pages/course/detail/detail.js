@@ -1,4 +1,4 @@
-// miniprogram/pages/class/video.js
+// miniprogram/pages/course/detial/detail.js
 Page({
 
   /**
