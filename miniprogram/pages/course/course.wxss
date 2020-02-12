@@ -1,1 +1,46 @@
 /* miniprogram/pages/course/course.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.navbar{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  text-align: center;
+  background-color: #fff;
+  
+}
+.navbar-item{
+  flex: 1;
+  padding: 15rpx 0px;
+  border: 1rpx solid rgb(228, 228, 228);
+}
+
+.etc{
+  text-align: center;
+}
+.courseList{
+  margin-top: 10rpx;
+}
+.courseBox{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx 20rpx;
+  border: 1rpx solid rgb(228, 228, 228);
+}
+.courseBox-active{
+  background-color: rgb(229, 228, 145);
+  border:1rpx solid rgb(238, 124, 71);
+}
+.titleBox{
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.introdcBox{
+  float: left;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
