@@ -7,7 +7,7 @@ Page({
   data: {
     userListInfo:[{
       text:'修改个人信息',
-      url:'chatroom/chatroom'
+      url:'user-info/user-info'
     },{
       text: '功能',
       url:''      
