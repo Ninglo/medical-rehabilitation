@@ -11,6 +11,10 @@
     "pages/course/course",
     "pages/course/detail/detail",
     "pages/course/detail/video",
+    "pages/course/detail/videos/page2/page2",
+    "pages/course/detail/videos/page3/page3",
+    "pages/course/detail/videos/page4/page4",
+    "pages/course/detail/videos/page5/page5"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
