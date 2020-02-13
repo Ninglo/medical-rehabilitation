@@ -1,0 +1,31 @@
+<!--pages/home/home.wxml-->
+<view class="b1">
+  <view class="img float" mode="cover">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="name float">
+    <open-data type="userNickName"></open-data>
+  </view>
+  <view></view>
+</view>
+<view class="b2">
+  <icon class="c1" bindtap="toMore01" data-url=""></icon>
+  <icon class="c1" bindtap="toMore02" data-url=""></icon>
+  <icon class="c1" bindtap="toMore03" data-url=""></icon>
+</view>
+<text>\n</text>
+<block wx:for="{{userListInfo}}" wx:key="index">
+  <view class="b3" bindtap="toMore2" data-url="{{item.url}}">
+    <view class="b4">
+      <view>{{item.text}}</view>
+    </view>
+    <view class="arrow"></view>
+  </view>
+</block>
+<text>\n</text>
+<view class="b3" bindtap="toMore3" data-url="">
+  <view class="b4">
+    <view >设置</view>
+  </view>
+  <view class="arrow"></view>
+</view>
