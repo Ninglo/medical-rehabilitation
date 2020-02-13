@@ -1,4 +1,3 @@
-/* pages/home/home.wxss */
 .img{
   overflow: hidden;
   width: 186rpx;
