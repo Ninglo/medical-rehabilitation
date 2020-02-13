@@ -1,106 +1,221 @@
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    title: '子页面',
-    barBg: '#f8f8f8',//#ff6600
-    fixed: true,
-    color: '#000000',//#ffffff
-    touchStartY: 0,//触摸开始的Y坐标
-    toggleBarShow: false,
-    backStyle: 'normal',
-    backEvent: false,
-    backHomeEvent: false
+    name:"",
+    sex:"",
+    age:"",
+    height:"",
+    weight:"",
+    tel:"",
+    cl1: "modi_2",
+    cl2: "modi_2",
+    cl3: "modi_2",
+    cl4: "modi_2",
+    cl5: "modi_2",
+    flg1: 0,
+    flg2: 0,
+    flg3: 0,
+    flg4: 0,
+    flg5: 0,
+    phone: function (param) {
+      return /^1(3\d|47|5((?!4)\d)|7\d|8\d)\d{8}$/g.test(param);
+    },
+    digital: function (param) {
+      return /^[1-9][0-9]{0,2}$/g.test(param);
+    },
   },
+  getName: function (e) {
+    this.setData({
+      name: e.detail.value
+    })
+    if(!this.data.name)
+    {
+      this.setData({
+        cl1: "modi_4",
+        flg1: 0
+      })
+    }
+    else{
+      this.setData({
+        cl1: "modi_2",
+        flg1: 1
+      })
+    }
+  },
+  getSex: function (e) {
+    this.setData({
+      sex: e.detail.value
+    })
+  },
+  getAge: function (e) {
+    this.setData({
+      age: e.detail.value
+    })
+    if (!this.data.age) {
+      this.setData({
+        cl2: "modi_4",
+        flg2: 0
+      })
+    }
+    else {
+      if(this.data.digital(this.data.age))
+      {
+        this.setData({
+          cl2: "modi_2",
+          flg2: 1
+        })
+      }
+      else
+      {
+        this.setData({
+          cl2: "modi_4",
+          flg2: 0
+        })
+      }
+    }
+  },
+  getHeight: function (e) {
+    this.setData({
+      height: e.detail.value
+    })
+    if (!this.data.height) {
+      this.setData({
+        cl3: "modi_4",
+        flg3: 0
+      })
+    }
+    else {
+      if (this.data.digital(this.data.height)) {
+        this.setData({
+          cl3: "modi_2",
+          flg3: 1
+        })
+      }
+      else {
+        this.setData({
+          cl3: "modi_4",
+          flg3: 0
+        })
+      }
+    }
+  },
+  getWeight: function (e) {
+    this.setData({
+      weight: e.detail.value
+    })
+    if (!this.data.weight) {
+      this.setData({
+        cl4: "modi_4",
+        flg4: 0
+      })
+    }
+    else {
+      if (this.data.digital(this.data.weight)) {
+        this.setData({
+          cl4: "modi_2",
+          flg4: 1
+        })
+      }
+      else {
+        this.setData({
+          cl4: "modi_4",
+          flg4: 0
+        })
+      }
+    }
+  },
+  getTel: function (e) {
+    this.setData({
+      tel: e.detail.value
+    })
+    if (!this.data.tel) {
+      this.setData({
+        cl5: "modi_4",
+        flg5: 0
+      })
+    }
+    else {
+      if (this.data.phone(this.data.tel)) {
+        this.setData({
+          cl5: "modi_2",
+          flg5: 1
+        })
+      }
+      else {
+        this.setData({
+          cl5: "modi_4",
+          flg5: 0
+        })
+      }
+    }
+  },
+  goToUser_center: function(){
+    if (this.data.name && this.data.sex && this.data.age && this.data.height &&       this.data.weight && this.data.tel)
+    {
+      if (this.data.flg1 == 1 && this.data.flg2 == 1 && this.data.flg3 == 1 &&          this.data.flg4 == 1 && this.data.flg5 == 1)
+      {
+        wx.navigateTo({
+          url: '../mypage',
+        })
+      }
+    }
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
   onLoad: function (options) {
-    console.log(options);
-    var obj = {};
-    console.log(obj);
-    if(options.title){
-      obj.title = options.title
-    }
-    if(options.nofixed){
-      obj.fixed = false
-    }
-    if(options.toggleBarShow){
-      obj.toggleBarShow = true;
-    }
-    if (options.backStyle) {
-      obj.backStyle = options.backStyle;
-    }
-    if (options.backHomeEvent) {
-      obj.backHomeEvent = true;
-    }
-    if (options.backEvent) {
-      obj.backEvent = true;
-    }
-    this.setData(obj);
+
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
-  },
-  touchstart(e) {
-    // this.data.touchStartY = e.changedTouches[0].clientY;
-    this.setData({ touchStartY: e.changedTouches[0].clientY });
-  },
-  touchmove(e) {
-    if(!this.data.toggleBarShow){
-    	return;
-    }
-    console.log(this.data.touchStartY - e.changedTouches[0].clientY, e.changedTouches[0].clientY);
-    if ((e.changedTouches[0].clientY - this.data.touchStartY) > 0 && (e.changedTouches[0].clientY - this.data.touchStartY) > 3) {//向上滚动
-      this.selectComponent("#navigationBar").toggleShow();
-    }
-    if ((e.changedTouches[0].clientY - this.data.touchStartY) < 0 && (this.data.touchStartY - e.changedTouches[0].clientY) > 30) {//向下滚动
-      this.selectComponent("#navigationBar").toggleHide();
-    }
-  },
-  onPageScroll(e){
-    // console.log(e.scrollTop, e.scrollTop - this.data.touchStartY);
-   if (e.scrollTop < 10) {//判断向上滚动顶部
-      // this.setData({ touchStartY: e.scrollTop });
-      this.selectComponent("#navigationBar").toggleShow();
-    }
 
   },
-  onShareAppMessage(res){
-    return {
-      title: '分享标题',
-      path: '/exmaple/child?title=来自分享页'
-    }
-  },
+
   /**
-   * 返回按钮触发事件
-   * @param {Object} e 事件对象
+   * 生命周期函数--监听页面显示
    */
-  backEvent(e){
-    // 这里可以写点击返回按钮相关的业务逻辑，下面逻辑提供参考
-    let self = this;
-    wx.showModal({
-      title: '提示，触发返回按钮事件',
-      content: '确定要退出当前页面吗？',
-      success(res) {
-        res.confirm && self.selectComponent('#navigationBar').runBack();//这里之所以调用了组件内部的返回上一页的方法，因为里面有判断逻辑，不想调用可以自行处理
-      }
-    })
+  onShow: function () {
+
   },
+
   /**
-   * 返回按钮触发事件
-   * @param {Object} e 事件对象
+   * 生命周期函数--监听页面隐藏
    */
-  backHomeEvent(e) {
-    // 这里可以写点击返回首页按钮相关的业务逻辑，下面逻辑提供参考
-    let self = this;
-    wx.showModal({
-      title: '提示，触发返回首页按钮事件',
-      content: '确定要退出当前页面吗？',
-      success(res) {
-        res.confirm && self.selectComponent('#navigationBar').runBackHome();//这里之所以调用了组件内部的返回首页的方法，因为里面有判断逻辑，不想调用可以自行处理
-      }
-    })
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
-});
+})
