@@ -1,0 +1,23 @@
+<!--pages/index2/index2.wxml-->
+<view class="top">
+  <view class="navigator">
+    <view class="navigator_">完成状况</view>
+    <view class="navigator_">剩余内容状况</view>
+  </view>
+</view>
+<view class="text-align">
+  <video src="{{videos[i]}}" controls></video>
+</view>
+<view>
+  <text>该动作的具体介绍：</text>
+</view>
+<view>{{video}}</view>
+<view class="text-align">
+  <view class="border">{{text1}}</view>
+  <view class="border">{{text2}}</view>
+  <view class="lastBorder">{{text3}}</view>
+</view>
+<view style="position:fixed;bottom:0;">
+  <view class="bottom"><button bindtap="clickButton">完成进度:{{i+1}}/{{videos.length}}</button></view>
+</view>
+
