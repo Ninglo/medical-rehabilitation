@@ -5,9 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userListInfo:[{
+    // 第一种功能键的图标来源地址及对应界面地址
+    functionKey:[{
+      src:'',
+      url:''
+    },{
+      src:'',
+      url:''
+    },{
+      src:'',
+      url:''
+    }
+    ],
+    // 第二种功能键的文本内容及对应界面地址
+    anotherFuntionKey:[{
       text:'修改个人信息',
-      url:'user-info/user-info'
+      url:'user-info/info'
     },{
       text: '功能',
       url:''      
@@ -19,66 +32,14 @@ Page({
       url:''
     }]
   },
-  toMore01: function (e) {
-    let url = e.currentTarget.setdata.url
-    if (url) {
-      wx: wx.navigateTo({
-        url: url,
-      })
-    } else {
-      wx.showModal({
-        title: '提示',
-        content: '功能还在开发中...',
-      })
-    }
-  },  
-  toMore02: function (e) {
-    let url = e.currentTarget.setdata.url
-    if (url) {
-      wx: wx.navigateTo({
-        url:url,
-      })
-    } else {
-      wx.showModal({
-        title: '提示',
-        content: '功能还在开发中...',
-      })
-    }
-  },
-  toMore03: function (e) {
-    let url = e.currentTarget.setdata.url
-    if (url) {
-      wx: wx.navigateTo({
-        url: url,
-      })
-    } else {
-      wx.showModal({
-        title: '提示',
-        content: '功能还在开发中...',
-      })
-    }
-  },  
-  toMore2: function (e) {
+  // 到达对应界面的函数
+  toMore: function (e) {
     let url = e.currentTarget.dataset.url
     if (url) {
-      wx: wx.navigateTo({
+      wx.navigateTo({
         url: url,
       })
     } else {
-      wx.showModal({
-        title: '提示',
-        content: '功能还在开发中...',
-      })
-    }
-  },
-
-  toMore3:function(e){
-    let url = e.currentTarget.setdata.url
-    if(url){
-      wx:wx.navigateTo({
-        url: url,
-      })
-    }else{
       wx.showModal({
         title: '提示',
         content: '功能还在开发中...',
