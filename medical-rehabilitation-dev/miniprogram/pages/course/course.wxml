@@ -1,0 +1,29 @@
+<!--miniprogram/pages/course/course.wxml-->
+<view class="container">
+  <view class="navbar">
+    <block wx:for="{{navbartxt}}" wx:key="unique" >
+      <view class="navbar-item">
+        <text>{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="mainBody">
+    <view class="courseList">
+      <block wx:for="{{course}}" wx:key="*this" wx:if="{{index < listLen}}">
+        <navigator url="{{item.url}}">
+          <view class="courseBox" hover-class="courseBox-active">
+            <view class="titleBox">
+              <text>{{item.courseTitle}}</text>
+            </view>
+            <view class="introdcBox">
+              <text>{{item.courseIntdc}}</text>
+            </view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <view class="etc" wx:if="{{listLen < course.length}}">
+      <view bindtap="viewMore">{{oneSentence}}</view>
+    </view>
+  </view>
+</view>

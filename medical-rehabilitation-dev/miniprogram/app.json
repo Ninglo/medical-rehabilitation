@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/mypage/mypage",
+    "pages/mypage/user-info/info",
+    "pages/test/test",
+    "pages/service/service",
+    "pages/mypage/settings/settings",
+    "pages/service/chatroom/chatroom",
+    "pages/questionnaire/questionnaire",
+    "pages/course/course",
+    "pages/course/detail/detail",
+    "pages/course/detail/video",
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icon_component.png",
+        "selectedIconPath": "images/icon_component_HL.png",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "iconPath": "images/icon_API.png",
+        "selectedIconPath": "images/icon_API_HL.png",
+        "text": "service"
+      }
+    ]
+  },
+  "usingComponents": {
+    "navigationBar": "components/navigationBar/index",
+    "dropdownmenu": "components/dropdownmenu/dropdownmenu"
+  }
+}
