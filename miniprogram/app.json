@@ -7,12 +7,12 @@
     "pages/service/service",
     "pages/mypage/settings/settings",
     "pages/service/chatroom/chatroom",
-    "pages/questionnaire/questionnaire",
     "pages/course/blank/blank",
     "pages/course/askforplan/askforplan",
     "pages/course/choosecourses/choosecourses",
     "pages/course/detail/detail",
-    "pages/course/detail/video"
+    "pages/course/detail/video",
+    "pages/service/chooseDoctor/chooseDoctor"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
