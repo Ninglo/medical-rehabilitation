@@ -8,7 +8,9 @@
     "pages/mypage/settings/settings",
     "pages/service/chatroom/chatroom",
     "pages/questionnaire/questionnaire",
-    "pages/course/course",
+    "pages/course/blank/blank",
+    "pages/course/askforplan/askforplan",
+    "pages/course/choosecourses/choosecourses",
     "pages/course/detail/detail",
     "pages/course/detail/video",
   ],
@@ -42,6 +44,8 @@
   },
   "usingComponents": {
     "navigationBar": "components/navigationBar/index",
-    "dropdownmenu": "components/dropdownmenu/dropdownmenu"
+    "dropdownmenu": "components/dropdownmenu/dropdownmenu",
+    "calendar": "components/calendar/calendar",
+    "modalView": "components/modal/modal"
   }
 }
