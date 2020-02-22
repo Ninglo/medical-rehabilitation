@@ -1,0 +1,5 @@
+<view class="introduction"> 当前就诊人：{{username}}</view>
+<view class="choContain">
+<view class="choice float"bindtap="assess" data-url="">医院评价</view>
+<view class="choice float" bindtap="assess" data-url="">医生评价</view>
+</view>

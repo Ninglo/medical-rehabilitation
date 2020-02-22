@@ -1,0 +1,44 @@
+.picker{
+  width: 350rpx;
+  height: 55rpx;
+  border:1px solid #F5F5F5;
+  margin-top: 25rpx;
+  border-radius: 10%;
+  text-align: center
+  }
+.float{
+  float:left
+}
+.text{
+  margin: 20rpx
+}
+.later{
+  margin-left: 190rpx
+}
+.arrow{
+width: 10px;
+height: 10px;
+border-top: 2px solid  #F5F5F5;
+border-right: 2px solid  #F5F5F5;
+position: absolute;
+right: 225rpx;
+transform: rotate(135deg);
+}
+.aone{
+  top: 35rpx
+}
+.atwo{
+  top: 120rpx
+}
+.athree{
+  top: 205rpx
+}
+.afour{
+  top:290rpx
+}
+.afive{
+  top:425rpx
+}
+.secondOne{
+  margin-left: 45rpx
+}

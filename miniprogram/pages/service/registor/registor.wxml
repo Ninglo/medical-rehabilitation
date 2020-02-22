@@ -1,0 +1,10 @@
+<!--pages/registor/registor.wxml-->
+<view class="container">
+  <view class="registorBox">
+    <text>\n</text>
+    <view class="registorText">
+      {{registorData}} {{subject}} {{doctorName}}医生
+    </view>
+    <view class="registorText">{{timeInterval}}</view>
+  </view>
+</view>

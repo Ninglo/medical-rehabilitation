@@ -1,0 +1,40 @@
+<form bindsubmit="saveMydoctor">
+<view class="head">就诊信息</view>
+<view>
+  <view class="text textEight">日期</view>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="bindDateChange">
+  <view class="picker pOne">{{date}}
+  <view class="arrow arrowOne"></view></view>
+  </picker>
+</view>
+<view >
+  <view class="text tSeven">就诊医院</view>
+  <picker mode="region" bindchange="bindRegionChange">
+    <view class="picker pTwo">{{region[0]}}
+    <view class="arrow arrowTwo"></view></view>
+    <view class="text tOne">省/直辖市</view>
+    <view class="picker pThree">{{region[1]}}
+    <view class="arrow arrowThree"></view></view>
+    <view class="text tTwo">市</view>
+    <view class="picker pFour">{{region[2]}}
+    <view class="arrow arrowFour"></view></view>
+    <view class="text tThree">区/县</view>
+  </picker>
+  <picker mode="selector" bindchange="bindHospitalChange" value="{{indexHos}}" range="{{hospitals}}" >
+    <view class="picker pFive">{{hospitals[indexHos]}}
+    <view class="arrow arrowFive"></view></view>
+    <view class="text tFour">医院名称</view>
+  </picker>
+</view>
+  <picker mode="selector" bindchange="bindSubjectChange" value="{{indexSub}}" range="{{subjects}}">
+  <view class="text tFive">就诊科</view>
+  <view class="picker pSix">{{subjects[indexSub]}}
+  <view class="arrow arrowSix"></view></view>
+</picker>
+  <picker mode="selector" bindchange="bindDoctorChange" value="{{index}}" range="{{doctors}}">
+    <view class="text tSix">医生名字</view>
+    <view class="picker pSeven">{{doctors[indexDoc]}}
+    <view class="arrow arrowSeven"></view></view>
+  </picker>
+  <button form-type="submit" class="button">确定</button>
+</form>

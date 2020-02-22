@@ -1,0 +1,116 @@
+.search{
+  width: 98%;
+}
+.search_arr {
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+.search_arr input{
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+}
+.sousuo {
+  padding-left: 38%;
+  width: 15%;
+  line-height: 150%;
+  text-align: center;
+}
+.page_row{
+  display: flex;
+  flex-direction: row
+}
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  margin-left:38%;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+}
+.table {
+  height: 70rpx;
+  border: 3rpx solid darkgray;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.tr {
+  height: 70rpx;
+  border-right: 3rpx solid darkgray;
+  width: 33%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.class2 {
+    position: relative;                               
+    display: flex;                                   
+    padding: 15px;                                   
+    align-items: center;                                
+    border-bottom: 1px solid #F5F5F5;
+    border-top: 1px solid #F5F5F5;          
+    background-color: white;                          
+    padding-top: 20px;                                  
+}
+.arrow1{
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 4rpx solid #999;
+    border-right: 4rpx solid #999;
+    position: absolute;
+    right: 20rpx;
+    transform: rotate(135deg);
+}
+.arrow2{
+    width: 30rpx;
+    height: 30rpx;
+    border-top: 5rpx solid #999;
+    border-right: 5rpx solid #999;
+    position: absolute;
+    right: 20rpx;
+    transform: rotate(45deg);
+    margin-top:5rpx;
+}
+.class3{
+    display: inline-block;
+    font-size: 45rpx;
+    color: black;
+}
+.class1{
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 0 10rpx;
+    background-color: #fff;
+    position: relative;
+}
+.selectBox {
+    background-color: #eee;
+    margin-left:67%; 
+    width: 33%;
+    padding: 0 10rpx;
+    position: absolute;
+    top: 190rpx;
+    z-index: 1;
+    overflow: hidden;
+    animation: myfirst 0.5s;
+}
+.selectOne {
+    height: 60rpx;
+    line-height: 60rpx;
+    border-top: 1px solid #ccc;
+}
+@keyframes myfirst {
+    from {
+        height: 0rpx;
+    }
+    to {
+        height: 180rpx;
+    }
+}

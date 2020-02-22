@@ -1,0 +1,18 @@
+.introduction{
+  height: 45rpx;
+  width: 750rpx;
+  text-align: center;
+  font-size: 15px
+}
+.float{
+  float: left
+}
+.choice{
+  width: 372rpx;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid #F5F5F5;
+  border-top: 1px solid #F5F5F5; 
+  border-right: 1px solid #F5F5F5;
+  border-left: 1px solid #F5F5F5;
+}
