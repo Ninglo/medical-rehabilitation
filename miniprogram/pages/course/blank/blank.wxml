@@ -1,0 +1,65 @@
+<!--pages/blank/blank.wxml-->
+<view>
+  <view>
+    <text>当前暂无训练计划，</text>
+    <text>请进入课程页添加。</text>
+  </view>
+  <view class="mainBody">
+    <view class="courseList">
+      <block wx:for="{{list}}" wx:key="*this">
+        <navigator url="{{item.url}}">
+          <view class="courseBox" hover-class="courseBox-active">
+            <view class="imageBox">
+              <image class="imageStyle" src="{{item.src}}"></image>
+            </view>
+            <view class="wordBox">
+              <view class="titleBox">
+                <text>{{item.courseTitle}}</text>
+              </view>
+              <view class="timeBox">
+                <text>{{item.courseYear}}年{{item.courseMonth}}月{{item.courseDay}}日</text>
+              </view>
+            </view>
+            <view class="buttonArea">
+              <view class="buttonBox"><text>{{item.button}}</text></view>
+            </view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>
+<view class="bottombar">
+  <view class="myPlan" bindtap="toMyplan">
+    <text>我的计划表</text>
+  </view>
+  <view class="addCourses" bindtap="toChoosecourses">
+    <text>添加课程</text>
+  </view>
+  <view class="askForplan" bindtap="toAskforplan">
+    <text>获取专属计划</text>
+  </view>
+</view>
+
+<view>
+  <modal hidden="{{hiddenModal}}" title="" confirm-text="" cancel-text="">
+    <view class="closeBox">
+      <view class="close" bindtap="closeModal">X</view>
+    </view>
+    <view class="titleBox">
+      <view class="title">计划表简介</view>
+      <view  class="cleanButton" bindtap="clearPlan">清空计划表</view>
+    </view>
+    <scroll-view scroll-y class='main-content'>
+      <view class="content">
+        <text>总天数：{{totalDates}}天</text>
+        <text>平均每周训练天数：{{averageDates}}天</text>
+        <text>平均每日训练时长：{{minPerday}}分钟</text>
+        <text>日程表（点击训练日期可添加备注信息）</text>
+      </view>
+      <view>
+        <calendar currentYear='2020' currentMonth="2" nowYear="2020" nowMonth="2" nowDate="20" bindsendObj='getCalendarData'></calendar>
+      </view>
+    </scroll-view>
+  </modal>
+</view>

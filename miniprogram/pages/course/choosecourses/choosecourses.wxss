@@ -1,0 +1,65 @@
+/* pages/choosecourses/choosecourses.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #fff;
+  
+}
+.navbar-item{
+  flex: 1;
+  padding: 15rpx 0px;
+  color:blue;
+  text-decoration-line: underline;
+}
+
+.courseList{
+  flex-direction: column;
+  margin-top: 10rpx;
+}
+.courseBox{
+  display: flex;
+  border: 1rpx solid rgb(0, 0, 0);
+}
+.courseBox-active{
+  background-color: rgb(229, 228, 145);
+  border:1rpx solid rgb(238, 124, 71);
+}
+.imageBox{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-bottom: 15rpx;
+}
+.imageStyle{
+  height: 200rpx;
+  width:200rpx;
+}
+.wordBox{
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+.titleBox{
+  margin-top: 40rpx;
+  margin-bottom: 15rpx;
+}
+.timeBox{
+  margin-bottom: 15rpx;
+}
+
+.buttonArea{
+  flex: 1;
+}
+.buttonBox{
+  float: right;
+  padding: 10rpx 15rpx;
+  border: 1rpx solid rgb(0, 0, 0);
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  margin-top: 90rpx;
+}

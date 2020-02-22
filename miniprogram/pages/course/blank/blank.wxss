@@ -1,0 +1,122 @@
+/* pages/blank/blank.wxss */
+.courseList{
+  flex-direction: column;
+  margin-top: 10rpx;
+}
+.courseBox{
+  display: flex;
+  border: 1rpx solid rgb(0, 0, 0);
+}
+.courseBox-active{
+  background-color: rgb(229, 228, 145);
+  border:1rpx solid rgb(238, 124, 71);
+}
+.imageBox{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  margin-bottom: 15rpx;
+}
+.imageStyle{
+  height: 200rpx;
+  width:200rpx;
+}
+.wordBox{
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+.titleBox{
+  margin-top: 40rpx;
+  margin-bottom: 15rpx;
+}
+.timeBox{
+  margin-bottom: 15rpx;
+}
+
+.buttonArea{
+  flex: 1;
+}
+.buttonBox{
+  float: right;
+  padding: 10rpx 15rpx;
+  border: 1rpx solid rgb(0, 0, 0);
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  margin-top: 90rpx;
+}
+
+
+.bottombar{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 100rpx;
+  justify-content: space-around;
+  background-color: white;
+  align-content: center;
+  align-items: center;
+}
+.myPlan{
+  flex: 1;
+  text-align: center;
+  padding: 10rpx;
+  border: 1rpx solid rgb(0, 0, 0);
+  border-radius: 10rpx;
+  margin: 10rpx;
+}
+.closeBox{
+  position: fixed;
+  top: 0rpx;
+  height: 30rpx;
+  width: 92%;
+}
+.close{
+  font-size: 30rpx;
+  float: right;
+}
+.titleBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #000;
+}
+.title{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.cleanButton{
+  text-align: center;
+  padding: 5rpx;
+  border: 1rpx solid rgb(0, 0, 0);
+  border-radius: 10rpx;
+}
+.main-content{
+  flex: 1;
+  height: 100%;
+  overflow-y: hidden; 
+  max-height: 40vh; /* 内容高度最高80vh 以免内容太多溢出*/
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+.addCourses{
+  flex:1;
+  text-align: center;
+  padding: 10rpx;
+  border: 1rpx solid rgb(0, 0, 0);
+  border-radius: 10rpx;
+  margin: 10rpx;
+}
+.askForplan{
+  flex:1;
+  text-align: center;
+  padding: 10rpx;
+  border: 1rpx solid rgb(0, 0, 0);
+  border-radius: 10rpx;
+  margin: 10rpx;
+}
