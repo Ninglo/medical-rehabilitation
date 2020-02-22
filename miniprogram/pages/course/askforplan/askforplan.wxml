@@ -1,0 +1,36 @@
+<!--pages/askforplan/askforplan.wxml-->
+<view>
+  <!-- modal弹窗-->
+  <modalView show="{{showModal}}">
+    <view class='modal-content'>
+      <scroll-view scroll-y class='main-content'>
+        <view class="tips">
+          <text>若医生忽略或拒绝了您的邀请（即在24小时内未同意），支付的费用将会退回您的微信零钱账户，同时给予5康复豆补偿。</text>
+        </view>
+      </scroll-view>
+    </view>
+  </modalView>
+</view>
+
+<view class="mainbody">
+  <block wx:for="{{doctor}}" wx:key="*this">
+    <navigator url="{{item.url}}">
+      <view class="doctorBox">
+        <view class="imageBox">
+          <image class="imageStyle" src="{{item.src}}"></image>
+        </view>
+        <view class="wordBox">
+          <view class="doctorName">
+            <text>{{item.name}}</text>
+          </view>
+          <view class="majorin">
+            <text>主治{{item.majorIn}}</text>
+          </view>
+        </view>
+        <view class="buttonArea">
+          <view class="buttonBox"><text>￥{{item.price}}元/次</text></view>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view>
