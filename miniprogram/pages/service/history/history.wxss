@@ -1,0 +1,11 @@
+/* pages/history/history.wxss */
+.registorBox{
+  width: 600rpx;
+  align-items: center;
+  height: 200rpx;
+  border: 1px solid #F5F5F5;
+  margin: 75rpx
+}
+.registorText{
+  text-align: center
+}

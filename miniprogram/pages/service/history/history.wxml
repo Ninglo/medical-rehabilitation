@@ -1,0 +1,8 @@
+<block wx:for='{{historyList}}'>  
+    <view class="registorBox">
+      <text>\n</text>
+      <view class="registorText">
+        {{item.data}} {{item.subject}} {{item.doctorName}}医生
+      </view>
+    </view>
+</block>
