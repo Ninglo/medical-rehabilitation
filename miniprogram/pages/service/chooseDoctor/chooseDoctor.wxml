@@ -1,0 +1,26 @@
+<view class='page_row' bindtap="suo">
+    <view class="search">
+        <view class="df search_arr">
+            <icon class="searchcion" size='16' type='search'></icon>
+            <input class="sousuo" disabled placeholder="搜索" bindtap='search'/>
+        </view>
+    </view>
+</view>
+<text>\n</text>
+<view class="table">
+    <view class="tr">综合</view>
+    <view class="tr">患者评价</view>
+    <view class="tr" bindtap='bindShowMsg'>{{screen}}</view><view class="arrow1"></view>
+</view>
+<!-- 下拉需要显示的列表 -->
+<view class="selectBox" wx:if="{{select}}">
+    <view class="selectOne" bindtap="mySelect" data-name="三甲医院">三甲医院</view>
+    <view class="selectOne" bindtap="mySelect" data-name="专科医院">专科医院</view>
+    <view class="selectOne" bindtap="mySelect" data-name="擅长病种">擅长病种</view>
+</view>
+<view class="class4" wx:for="{{docterType}}" wx:key="index">
+    <view class="class2" bindtap="naviGateToChooseDoctor" data-url="{{item.url}}">
+        <view class="class3">{{item.text}}</view>
+        <view class="arrow2"></view>
+    </view>
+</view>

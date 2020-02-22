@@ -1,0 +1,29 @@
+<form bindsubmit="saveRes">
+  <view>
+    <view class="text float">就诊医院</view>
+    <picker mode="region" bindchange="bindRegionChange" name="region">
+      <view class="picker float">{{region[0]}}
+      <view class="arrow aone"></view></view>
+      <view class="text float">省/直辖市</view>
+      <view class="picker float later">{{region[1]}}
+      <view class="arrow atwo"></view></view>
+      <view class="text float">市</view>
+      <view class="picker float later">{{region[2]}}
+      <view class="arrow athree"></view></view>
+      <view class="text float">区/县</view>
+    </picker>
+    <picker mode="selector" bindchange="bindHospitalChange" value="{{indexHos}}" range="{{hospitals}}"  name="hospital">
+      <view class="picker float later">{{hospitals[indexHos]}}
+      <view class="arrow afour"></view></view>
+      <view class="text float">医院名称</view>
+    </picker>
+</view>
+  <text>\n\n\n\n\n\n\n\n</text>
+  <picker mode="selector" bindchange="bindSubjectChange" value="{{indexSub}}" range="{{subjects}}" name="subject">
+  <view class="text float">就诊科</view>
+  <view class="picker float secondOne">{{subjects[indexSub]}}
+  <view class="arrow afive"></view></view>
+  </picker>
+  <text>\n\n\n\n\n\n\n\n</text>
+  <button form-type="submit">确定</button>
+</form>
