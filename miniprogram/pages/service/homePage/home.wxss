@@ -1,0 +1,9 @@
+.functionCho{
+  width: 146rpx;
+  height: 80rpx;
+  text-align: center;
+  padding-top: 20rpx;
+  border: 1px solid #F5F5F5;
+  float: left;
+  margin-top: 1080rpx
+}

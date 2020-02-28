@@ -11,6 +11,9 @@
     "pages/course/course",
     "pages/course/detail/detail",
     "pages/course/detail/video",
+    "pages/service/chooseType/chooseType",
+    "pages/service/chooseTime/chooseTime",
+    "pages/service/homePage/homePage"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

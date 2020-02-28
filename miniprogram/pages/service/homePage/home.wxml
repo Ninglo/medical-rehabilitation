@@ -1,0 +1,6 @@
+<navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" fixed="{{fixed}}" backConfirm="{{backConfirm}}" backStyle="{{backStyle}}" backEvent="{{backEvent}}" bind:back="backEvent" backHomeEvent="{{backHomeEvent}}" bind:backHome="backHomeEvent"></navigationBar>
+<block wx:for="{{functionCho}}" wx:key="index">
+  <view class="functionCho"bindtap="toMore" data-url="{{item.url}}">
+    {{item.text}}
+  </view>
+</block>
