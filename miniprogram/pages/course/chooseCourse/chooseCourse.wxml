@@ -1,0 +1,54 @@
+<navigationBar
+  id="navigationBar"
+  placeholderBg=""
+  color="{{ color }}"
+  title="{{ title }}"
+  back="{{ true }}"
+  background="{{ barBg }}"
+  fixed="{{ fixed }}"
+  backConfirm="{{ backConfirm }}"
+  backStyle="{{ backStyle }}"
+  backEvent="{{ backEvent }}"
+  bind:back="backEvent"
+  backHomeEvent="{{ backHomeEvent }}"
+  bind:backHome="backHomeEvent"
+></navigationBar>
+
+<view class="container">
+  <view class="navbar">
+    <block wx:for="{{ navbartxt }}" wx:key="unique">
+      <view class="navbar-item">
+        <text>{{ item }}</text>
+      </view>
+    </block>
+  </view>
+  <view class="mainBody">
+    <view class="courseList">
+      <block wx:for="{{ course }}" wx:key="*this">
+        <navigator url="{{ item.url }}">
+          <view class="courseBox" hover-class="courseBox-active">
+            <view class="imageBox">
+              <image class="imageStyle" src="{{ item.src }}"></image>
+            </view>
+            <view class="wordBox">
+              <view class="titleBox">
+                <text>{{ item.courseTitle }}</text>
+              </view>
+              <view class="timeBox">
+                <text>约耗时{{ item.courseTime }}</text>
+              </view>
+              <view class="countsBox">
+                <text>已有{{ item.counts }}人选</text>
+              </view>
+            </view>
+            <view class="buttonArea">
+              <view class="buttonBox"
+                ><text>{{ item.button }}</text></view
+              >
+            </view>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>

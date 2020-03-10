@@ -1,4 +1,19 @@
-<navigationBar id="navigationBar" placeholderBg="" color="{{color}}" title="{{title}}" back="{{true}}" background="{{barBg}}" fixed="{{fixed}}" backConfirm="{{backConfirm}}" backStyle="{{backStyle}}" backEvent="{{backEvent}}" bind:back="backEvent" backHomeEvent="{{backHomeEvent}}" bind:backHome="backHomeEvent"></navigationBar>
+<navigationBar
+  id="navigationBar"
+  placeholderBg=""
+  color="{{ color }}"
+  title="{{ title }}"
+  back="{{ true }}"
+  background="{{ barBg }}"
+  fixed="{{ fixed }}"
+  backConfirm="{{ backConfirm }}"
+  backStyle="{{ backStyle }}"
+  backEvent="{{ backEvent }}"
+  bind:back="backEvent"
+  backHomeEvent="{{ backHomeEvent }}"
+  bind:backHome="backHomeEvent"
+></navigationBar>
+
 <view class="weui-panel weui-panel_access">
   <view class="weui-panel__hd">图文组合列表</view>
   <view class="weui-panel__bd">

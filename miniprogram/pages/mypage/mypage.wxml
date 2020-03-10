@@ -1,3 +1,19 @@
+<navigationBar
+  id="navigationBar"
+  placeholderBg=""
+  color="{{ color }}"
+  title="{{ title }}"
+  back="{{ true }}"
+  background="{{ barBg }}"
+  fixed="{{ fixed }}"
+  backConfirm="{{ backConfirm }}"
+  backStyle="{{ backStyle }}"
+  backEvent="{{ backEvent }}"
+  bind:back="backEvent"
+  backHomeEvent="{{ backHomeEvent }}"
+  bind:backHome="backHomeEvent"
+></navigationBar>
+
 <view class="b1">
   <view class="img float" mode="cover">
     <open-data type="userAvatarUrl"></open-data>
@@ -8,23 +24,23 @@
   <view></view>
 </view>
 <view class="b2">
-  <icon class="c1" bindtap="toMore01" data-url=""></icon>
-  <icon class="c1" bindtap="toMore02" data-url=""></icon>
-  <icon class="c1" bindtap="toMore03" data-url=""></icon>
+  <icon class="c1" bindtap="toNewPage" data-url=""></icon>
+  <icon class="c1" bindtap="toNewPage" data-url=""></icon>
+  <icon class="c1" bindtap="toNewPage" data-url=""></icon>
 </view>
 <text>\n</text>
-<block wx:for="{{userListInfo}}" wx:key="index">
-  <view class="b3" bindtap="toMore2" data-url="{{item.url}}">
+<block wx:for="{{ userListInfo }}" wx:key="index">
+  <view class="b3" bindtap="toNewPage" data-url="{{ item.url }}">
     <view class="b4">
-      <view>{{item.text}}</view>
+      <view>{{ item.text }}</view>
     </view>
     <view class="arrow"></view>
   </view>
 </block>
 <text>\n</text>
-<view class="b3" bindtap="toMore3" data-url="">
+<view class="b3" bindtap="toNewPage" data-url="/pages/mypage/settings/settings">
   <view class="b4">
-    <view >设置</view>
+    <view>设置</view>
   </view>
   <view class="arrow"></view>
 </view>

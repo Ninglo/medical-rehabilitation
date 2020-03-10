@@ -70,7 +70,7 @@ Page({
 
   toChoosecourses: function() {
     wx.navigateTo({
-      url: "../choosecourses/choosecourses"
+      url: "../chooseCourse/chooseCourse"
     });
   },
 

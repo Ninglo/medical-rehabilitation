@@ -24,7 +24,7 @@
   dropDownMenuFilterData="{{ data4 }}"
   bind:selectedItem="selectedItem"
 ></dropdownmenu>
-<!-- 首页顶部的滚动图片展示 -->
+
 <swiper class="swiper-index" indicator-dots="true">
   <swiper-item>
     <view class="bc_green">Some pictures.</view>
@@ -49,7 +49,7 @@
 <view class="weui-cells__title">带跳转的列表项</view>
 <view class="weui-cells weui-cells_after-title">
   <navigator
-    url="/pages/course/askforplan/askforplan"
+    url="/pages/service/search/search"
     class="weui-cell weui-cell_access"
     hover-class="weui-cell_active"
   >
@@ -57,7 +57,7 @@
     <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </navigator>
   <navigator
-    url="/pages/course/blank/blank"
+    url="/pages/test/test"
     class="weui-cell weui-cell_access"
     hover-class="weui-cell_active"
   >

@@ -1,25 +1,62 @@
-<view class='modi_1'>
-  <text>请完善您的个人信息：\n</text>
-</view>
-<text>\n</text>
-<view class='modi_3'>
-  <text>用户名：\n</text>
-  <input class='{{cl1}}' type="text" bindinput="getName"></input>
-  <text>性别：\n</text>
-  <radio-group bindchange="getSex">
-    <radio value="male">
-      <text space="nbsp">男             </text>
-    </radio>
-    <radio value="female"><text>女</text></radio>
-  </radio-group>
-<text>年龄：\n</text>
-<input class='{{cl2}}' type="number" maxlength='3' bindinput="getAge" placeholder="请填整数"></input>
-<text>身高：(cm)\n</text>
-<input class='{{cl3}}' type="number" bindinput="getHeight" placeholder="请填整数"></input>
-<text>体重：(kg)\n</text>
-<input class='{{cl4}}' type="number" bindinput="getWeight" placeholder="请填整数"></input>
-<text>电话号码：\n</text>
-<input class='{{cl5}}' type="number" maxlength='11' bindinput="getTel"></input>
-<text>\n</text>
-<button size="mini" type="primary" bindtap="goToUser_center">保存</button>
-</view>
+<navigationBar
+  id="navigationBar"
+  placeholderBg=""
+  color="{{ color }}"
+  title="{{ title }}"
+  back="{{ true }}"
+  background="{{ barBg }}"
+  fixed="{{ fixed }}"
+  backConfirm="{{ backConfirm }}"
+  backStyle="{{ backStyle }}"
+  backEvent="{{ backEvent }}"
+  bind:back="backEvent"
+  backHomeEvent="{{ backHomeEvent }}"
+  bind:backHome="backHomeEvent"
+>
+</navigationBar>
+
+<form bindsubmit="submitUserInfo">
+  <view class="modi_1">
+    <text>请完善您的个人信息：\n</text>
+  </view>
+  <text>\n</text>
+  <view class="modi_3">
+    <text>用户名：\n</text>
+    <input class="{{ cl1 }}" type="text" name="userName" />
+    <text>性别：\n</text>
+    <radio-group name="gendar">
+      <radio value="male">
+        <text space="nbsp">男</text>
+      </radio>
+      <radio value="female">
+        <text>女</text>
+      </radio>
+    </radio-group>
+    <text>年龄：\n</text>
+    <input
+      class="{{ cl2 }}"
+      type="number"
+      maxlength="3"
+      placeholder="请填整数"
+      name="age"
+    />
+    <text>身高：(cm)\n</text>
+    <input
+      class="{{ cl3 }}"
+      type="number"
+      placeholder="请填整数"
+      name="height"
+    />
+    <text>体重：(kg)\n</text>
+    <input
+      class="{{ cl4 }}"
+      type="number"
+      placeholder="请填整数"
+      name="weight"
+    />
+    <text>电话号码：\n</text>
+    <input class="{{ cl5 }}" type="number" maxlength="11" name="telNumber" />
+    <text>\n</text>
+    <button size="mini" type="primary" form-type="submit">保存</button>
+  </view>
+</form>
