@@ -1,25 +1,25 @@
 <view class="table">
-    <view class="tr" bindtap='showGuidance'>导诊</view>
-    <view class="tr" bindtap='showConsultation'>诊疗</view>
-    <view class="tr" bindtap='goToFeedback'>就医反馈</view>
-    <view class="arrow2"></view><view class="arrow1"></view><view class="arrow3"></view>
+  <view class="tr" bindtap="showGuidance">导诊</view>
+  <view class="tr" bindtap="showConsultation">诊疗</view>
+  <view class="tr" bindtap="goToFeedback">就医反馈</view>
+  <view class="arrow2"></view><view class="arrow1"></view
+  ><view class="arrow3"></view>
 </view>
 
-
-<view class="selectBox1" wx:if="{{select1}}">
-<view class="selectOne" wx:for="{{theGuidance}}" wx:key="index">
-    <view bindtap="mySelect" data-url="{{item.url}}">
-        <view>{{item.text}}</view>
+<view class="selectBox1" wx:if="{{ select1 }}">
+  <view class="selectOne" wx:for="{{ theGuidance }}" wx:key="index">
+    <view bindtap="mySelect" data-url="{{ item.url }}">
+      <view>{{ item.text }}</view>
     </view>
-</view>
+  </view>
 </view>
 
-<view class="selectBox2" wx:if="{{select2}}">
-<view class="selectOne" wx:for="{{theConsultation}}" wx:key="index">
-    <view bindtap="mySelect" data-url="{{item.url}}">
-        <view>{{item.text}}</view>
+<view class="selectBox2" wx:if="{{ select2 }}">
+  <view class="selectOne" wx:for="{{ theConsultation }}" wx:key="index">
+    <view bindtap="mySelect" data-url="{{ item.url }}">
+      <view>{{ item.text }}</view>
     </view>
-</view>
+  </view>
 </view>
 
 <view class="myDoctor" bindtap="goToMyDoctor">我的医生</view>

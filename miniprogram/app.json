@@ -1,18 +1,25 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/test/test",
     "pages/mypage/mypage",
     "pages/mypage/user-info/info",
-    "pages/test/test",
-    "pages/service/service",
     "pages/mypage/settings/settings",
-    "pages/service/chatroom/chatroom",
     "pages/course/blank/blank",
     "pages/course/askforplan/askforplan",
     "pages/course/choosecourses/choosecourses",
     "pages/course/detail/detail",
     "pages/course/detail/video",
-    "pages/service/chooseDoctor/chooseDoctor"
+    "pages/service/chooseDoctor/chooseDoctor",
+    "pages/service/chatroom/chatroom",
+    "pages/service/consultation/consultation",
+    "pages/service/feedback/feedback",
+    "pages/service/history/history",
+    "pages/service/interrogation/interrogation",
+    "pages/service/mydoctor/mydoctor",
+    "pages/service/order/order",
+    "pages/service/registor/registor",
+    "pages/service/service"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

@@ -1,33 +1,35 @@
 <!--pages/choosecourses/choosecourses.wxml-->
 <view class="container">
   <view class="navbar">
-    <block wx:for="{{navbartxt}}" wx:key="unique" >
+    <block wx:for="{{ navbartxt }}" wx:key="unique">
       <view class="navbar-item">
-        <text>{{item}}</text>
+        <text>{{ item }}</text>
       </view>
     </block>
   </view>
   <view class="mainBody">
     <view class="courseList">
-      <block wx:for="{{course}}" wx:key="*this">
-        <navigator url="{{item.url}}">
+      <block wx:for="{{ course }}" wx:key="*this">
+        <navigator url="{{ item.url }}">
           <view class="courseBox" hover-class="courseBox-active">
             <view class="imageBox">
-              <image class="imageStyle" src="{{item.src}}"></image>
+              <image class="imageStyle" src="{{ item.src }}"></image>
             </view>
             <view class="wordBox">
               <view class="titleBox">
-                <text>{{item.courseTitle}}</text>
+                <text>{{ item.courseTitle }}</text>
               </view>
               <view class="timeBox">
-                <text>约耗时{{item.courseTime}}</text>
+                <text>约耗时{{ item.courseTime }}</text>
               </view>
               <view class="countsBox">
-                <text>已有{{item.counts}}人选</text>
+                <text>已有{{ item.counts }}人选</text>
               </view>
             </view>
             <view class="buttonArea">
-              <view class="buttonBox"><text>{{item.button}}</text></view>
+              <view class="buttonBox"
+                ><text>{{ item.button }}</text></view
+              >
             </view>
           </view>
         </navigator>

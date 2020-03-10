@@ -1,26 +1,47 @@
+<navigationBar
+  id="navigationBar"
+  arrow="{{ menuArrow }}"
+  bind:arrowClick="getData"
+  placeholderBg=""
+  color="{{ color }}"
+  title="{{ className }}"
+  back="{{ true }}"
+  background="{{ barBg }}"
+  fixed="{{ fixed }}"
+  backConfirm="{{ backConfirm }}"
+  backStyle="{{ backStyle }}"
+  backEvent="{{ backEvent }}"
+  bind:back="backEvent"
+  backHomeEvent="{{ backHomeEvent }}"
+  bind:backHome="backHomeEvent"
+></navigationBar>
 <!--下拉框  -->
-<view class='class1' bindtap='bindShowMsg'>
-    <text>{{diseaseType}}</text>
-    <view class="arrow1"></view>
+<view class="class1" bindtap="bindShowMsg">
+  <text>{{ diseaseType }}</text>
+  <view class="arrow1"></view>
 </view>
 <!-- 下拉需要显示的列表 -->
-<view class="selectBox" wx:if="{{select}}">
-    <view class="selectOne" bindtap="mySelect" data-name="神经系统">神经系统</view>
-    <view class="selectOne" bindtap="mySelect" data-name="骨关节疾病">骨关节疾病</view>
-    <view class="selectOne" bindtap="mySelect" data-name="心血管疾病">心血管疾病</view>
-    <view class="selectOne" bindtap="mySelect" data-name="老年康复">老年康复</view>
+<view class="selectBox" wx:if="{{ select }}">
+  <block wx:for="{{ illNames }}">
+    <view class="selectOne" bindtap="mySelect" data-name="{{ item }}">{{
+      item
+    }}</view>
+  </block>
 </view>
+! 另外这里的显示的下来标签不全, 建议直接套用home页的标签
 
-<text>\n</text>
-<text>\n</text>
-<text>\n</text>
-<text>\n</text>
-<text>\n</text>
-<text>\n</text>
-<text>\n</text>
-<view class="class4" wx:for="{{docterType}}" wx:key="index">
-    <view class="class2" bindtap="naviGateToChooseDoctor" data-url="{{item.url}}">
-        <view class="class3">{{item.text}}</view>
-        <view class="arrow2"></view>
-    </view>
+<block wx:for="{{ 5 }}">
+  <text>\n</text>
+</block>
+! 不要重复写内容, 使用循环来解决问题
+
+<view class="class4" wx:for="{{ docterType }}" wx:key="index">
+  <view
+    class="class2"
+    bindtap="naviGateToChooseDoctor"
+    data-url="{{ item.url }}"
+  >
+    <view class="class3">{{ item.text }}</view>
+    <view class="arrow2"></view>
+  </view>
 </view>
