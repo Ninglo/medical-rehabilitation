@@ -47,7 +47,7 @@
     width: 32%;
     padding: 0 10rpx;
     position: absolute;
-    top: 110rpx;
+    top: 260rpx;
     z-index: 1;
     overflow: hidden;
     animation: myFirst 0.5s;
@@ -58,7 +58,7 @@
     margin-left: 33%;
     padding: 0 10rpx;
     position: absolute;
-    top: 110rpx;
+    top: 260rpx;
     z-index: 1;
     overflow: hidden;
     animation: mySecond 0.5s;
