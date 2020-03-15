@@ -28,12 +28,10 @@
     }}</view>
   </block>
 </view>
-! 另外这里的显示的下来标签不全, 建议直接套用home页的标签
 
 <block wx:for="{{ 5 }}">
   <text>\n</text>
 </block>
-! 不要重复写内容, 使用循环来解决问题
 
 <view class="class4" wx:for="{{ docterType }}" wx:key="index">
   <view
