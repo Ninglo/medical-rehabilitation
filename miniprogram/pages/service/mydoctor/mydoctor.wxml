@@ -1,3 +1,20 @@
+<navigationBar
+  id="navigationBar"
+  arrow="{{ menuArrow }}"
+  bind:arrowClick="getData"
+  placeholderBg=""
+  color="{{ color }}"
+  title="{{ className }}"
+  back="{{ true }}"
+  background="{{ barBg }}"
+  fixed="{{ fixed }}"
+  backConfirm="{{ backConfirm }}"
+  backStyle="{{ backStyle }}"
+  backEvent="{{ backEvent }}"
+  bind:back="backEvent"
+  backHomeEvent="{{ backHomeEvent }}"
+  bind:backHome="backHomeEvent"
+></navigationBar>
 <form bindsubmit="saveMydoctor">
   <view class="head">就诊信息</view>
   <view>
@@ -64,5 +81,5 @@
       >{{ doctors[indexDoc] }} <view class="arrow arrowSeven"></view
     ></view>
   </picker>
-  <button form-type="submit" class="button">确定</button>
+  <button type="primary" form-type="submit" class="button">确定</button>
 </form>
