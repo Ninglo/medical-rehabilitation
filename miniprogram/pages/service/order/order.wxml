@@ -1,8 +1,25 @@
+<navigationBar
+  id="navigationBar"
+  arrow="{{ menuArrow }}"
+  bind:arrowClick="getData"
+  placeholderBg=""
+  color="{{ color }}"
+  title="{{ className }}"
+  back="{{ true }}"
+  background="{{ barBg }}"
+  fixed="{{ fixed }}"
+  backConfirm="{{ backConfirm }}"
+  backStyle="{{ backStyle }}"
+  backEvent="{{ backEvent }}"
+  bind:back="backEvent"
+  backHomeEvent="{{ backHomeEvent }}"
+  bind:backHome="backHomeEvent"
+></navigationBar>
 <form bindsubmit="saveRes">
   <view>
     <view class="text float">就诊医院</view>
     <picker mode="region" bindchange="bindRegionChange" name="region">
-      <view class="picker float"
+      <view class="picker firstOne float"
         >{{ region[0] }} <view class="arrow aone"></view
       ></view>
       <view class="text float">省/直辖市</view>
@@ -28,8 +45,7 @@
       <view class="text float">医院名称</view>
     </picker>
   </view>
-  <text>\n\n\n\n\n\n\n\n</text>
-  ! 之后尽量使用css改变布局
+
   <picker
     mode="selector"
     bindchange="bindSubjectChange"
@@ -42,6 +58,5 @@
       >{{ subjects[indexSub] }} <view class="arrow afive"></view
     ></view>
   </picker>
-  <text>\n\n\n\n\n\n\n\n</text>
-  <button form-type="submit">确定</button>
+  <button class="but" type="primary" form-type="submit">确定</button>
 </form>
