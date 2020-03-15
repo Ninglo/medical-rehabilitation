@@ -1,0 +1,24 @@
+<navigationBar
+  id="navigationBar"
+  arrow="{{ menuArrow }}"
+  bind:arrowClick="getData"
+  placeholderBg=""
+  color="{{ color }}"
+  title="{{ className }}"
+  back="{{ true }}"
+  background="{{ barBg }}"
+  fixed="{{ fixed }}"
+  backConfirm="{{ backConfirm }}"
+  backStyle="{{ backStyle }}"
+  backEvent="{{ backEvent }}"
+  bind:back="backEvent"
+  backHomeEvent="{{ backHomeEvent }}"
+  bind:backHome="backHomeEvent"
+></navigationBar>
+<!-- 需要根据后台数据加载 -->
+
+<block wx:for="{{choiceList}}">
+  <view class="timeBox float">nnnn</view>
+  <view class="orderBox float" bindtap="toChoDoctor">nnnn</view>
+</block>
+

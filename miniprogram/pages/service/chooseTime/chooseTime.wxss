@@ -1,0 +1,19 @@
+.float{
+  float: left
+}
+.timeBox{
+  margin: 20rpx;
+  border: 1px solid #F5F5F5;
+  height: 100rpx;
+  width: 500rpx;
+  text-align: center;
+  padding-top: 40rpx
+}
+.orderBox{
+  margin-left: 40rpx;
+  margin-top: 45rpx;
+  border: 1px solid #F5F5F5;
+  height: 60rpx;
+  width: 150rpx;
+  text-align: center
+}
