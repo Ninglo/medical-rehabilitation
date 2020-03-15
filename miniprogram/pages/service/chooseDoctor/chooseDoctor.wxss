@@ -96,7 +96,7 @@
     width: 33%;
     padding: 0 10rpx;
     position: absolute;
-    top: 190rpx;
+    top: 345rpx;
     z-index: 1;
     overflow: hidden;
     animation: myfirst 0.5s;
