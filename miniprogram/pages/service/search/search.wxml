@@ -1,3 +1,18 @@
+<navigationBar
+  id="navigationBar"
+  placeholderBg=""
+  color="{{ color }}"
+  title="{{ title }}"
+  back="{{ true }}"
+  background="{{ barBg }}"
+  fixed="{{ fixed }}"
+  backConfirm="{{ backConfirm }}"
+  backStyle="{{ backStyle }}"
+  backEvent="{{ backEvent }}"
+  bind:back="backEvent"
+  backHomeEvent="{{ backHomeEvent }}"
+  bind:backHome="backHomeEvent"
+></navigationBar>
 <view>
      <view>
         <view class="weui-search-bar">
