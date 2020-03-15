@@ -1,3 +1,20 @@
+<navigationBar
+  id="navigationBar"
+  arrow="{{ menuArrow }}"
+  bind:arrowClick="getData"
+  placeholderBg=""
+  color="{{ color }}"
+  title="{{ className }}"
+  back="{{ true }}"
+  background="{{ barBg }}"
+  fixed="{{ fixed }}"
+  backConfirm="{{ backConfirm }}"
+  backStyle="{{ backStyle }}"
+  backEvent="{{ backEvent }}"
+  bind:back="backEvent"
+  backHomeEvent="{{ backHomeEvent }}"
+  bind:backHome="backHomeEvent"
+></navigationBar>
 <view class="page_row" bindtap="suo">
   <view class="search">
     <view class="df search_arr">
@@ -11,8 +28,8 @@
 <view class="table">
   <view class="tr">综合</view>
   <view class="tr">患者评价</view>
-  <view class="tr" bindtap="bindShowMsg">{{ screen }}</view
-  ><view class="arrow1"></view>
+  <view class="tr" bindtap="bindShowMsg">{{ screen }}</view>
+  <view class="arrow1" bindtap="bindShowMsg"></view>
 </view>
 <!-- 下拉需要显示的列表 -->
 <view class="selectBox" wx:if="{{ select }}">
