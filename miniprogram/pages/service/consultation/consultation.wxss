@@ -11,9 +11,9 @@
 .selectBox {
   background-color: #eee;
   width: 100%;
-  padding: 0 10rpx;
+  padding: 0 10rpxs;
   position: absolute;
-  top: 70rpx;
+  top: 210rpx;
   z-index: 1;
   overflow: hidden;
   animation: myfirst 0.5s;
