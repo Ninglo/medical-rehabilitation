@@ -3,7 +3,7 @@
   width: 600rpx;
   align-items: center;
   height: 200rpx;
-  border: 1px solid #F5F5F5
+  border: 1px solid black
 }
 .registorText{
   text-align: center
