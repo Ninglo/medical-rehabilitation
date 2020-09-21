@@ -1,0 +1,26 @@
+<view class="bg_white">
+  <text class="td">{{ courseName }}</text>
+  <button wx:if="{{ type == 'start' }}" bindtap="startCourse">Start</button>
+  <button wx:if="{{ type == 'addCourse' }}" bindtap="addCourse">addCourse</button>
+</view>
+<text>\n</text>
+<view class="bg_white shape">
+  <view wx:for="{{ introductions }}" style="flex: auto;">
+    <text class="td">{{ item }}:\n</text>
+    <text class="td">{{ item.detail }}</text>
+  </view>
+</view>
+<text>\n</text>
+<view class="box2">
+  <view wx:for="{{ actions }}" wx:for-item="action" style="flex: auto;">
+    <view>
+      <text>{{ action.name }}\n</text>
+      <view class="bg_gray shape">
+        <view wx:for="{{ action.points }}" wx:for-item="action" wx:key="courseId" style="flex: auto;">
+          <text>{{ action }}\n</text>
+        </view>
+        <text>{{ action.detail }}</text>
+      </view>
+    </view>
+  </view>
+</view>

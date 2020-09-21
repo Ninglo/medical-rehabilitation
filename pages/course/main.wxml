@@ -1,0 +1,82 @@
+<view class="layoutHorizontal">
+  <button id="addPlan" bindtap="switchLoad">addPlan</button>
+  <button id="planTable" bindtap="switchLoad">planTable</button>
+  <button id="courseLib" bindtap="switchLoad">courseLib</button>
+</view>
+
+<view wx:if="{{ display == 'addPlan' }}">addPlan</view>
+
+<view wx:if="{{ display == 'planTable' }}">
+  <!--
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">今日计划</view>
+    <view class="weui-panel__bd">
+      <block wx:for="{{ mycourses }}" wx:key="id">
+        <a class="weui-media-box weui-media-box_appmsg" bindtap="openCourse" id="{{ item.id }}">
+          <view class="weui-media-box__hd">
+            <image class="weui-media-box__thumb"></image>
+          </view>
+          <view class="weui-media-box__bd">
+            <h4 class="weui-media-box__title">{{ item.name }}</h4>
+            <view class="weui-media-box__desc">
+              {{ item.introduct }}
+            </view>
+          </view>
+        </a>
+      </block>
+    </view>
+    <view class="weui-panel__ft">
+      <a class="weui-cell weui-cell_access weui-cell_link">
+        <view class="weui-cell__bd">查看更多</view>
+        <text class="weui-cell__ft"></text>
+      </a>
+    </view>
+  </view>
+  -->
+  <view class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd">进行中的课程</view>
+    <view class="weui-panel__bd">
+      <block wx:for="{{ mycourses }}" wx:for-item="item" wx:key="courseId">
+        <a class="weui-media-box weui-media-box_appmsg" bindtap="show" data-courseid="{{ item.courseId }}">
+          <view class="weui-media-box__hd">
+            <image class="weui-media-box__thumb"></image>
+          </view>
+          <view class="weui-media-box__bd">
+            <h4 class="weui-media-box__title">{{ item.courseName }}</h4>
+            <view class="weui-media-box__desc">
+              {{ item.schedule }}
+            </view>
+          </view>
+        </a>
+      </block>
+    </view>
+    <view class="weui-panel__ft">
+      <a class="weui-cell weui-cell_access weui-cell_link">
+        <view class="weui-cell__bd">查看更多</view>
+        <text class="weui-cell__ft"></text>
+      </a>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{ display == 'courseLib' }}">
+  <block wx:for="{{ courses }}" wx:for-item="project" wx:key="{{ project.courseId }}">
+    <a class="weui-media-box weui-media-box_appmsg" bindtap="openCourse" id="{{ project.courseId }}">
+      <view class="weui-media-box__hd">
+        <image class="weui-media-box__thumb"></image>
+      </view>
+      <view class="weui-media-box__bd">
+        <h4 class="weui-media-box__title">{{ project.courseName }}</h4>
+        <view class="weui-media-box__desc">
+          {{ project.detail.intro }}
+        </view>
+      </view>
+    </a>
+  </block>
+  <view class="weui-panel__ft">
+    <a class="weui-cell weui-cell_access weui-cell_link">
+      <view class="weui-cell__bd">查看更多</view>
+      <text class="weui-cell__ft"></text>
+    </a>
+  </view>
+</view>

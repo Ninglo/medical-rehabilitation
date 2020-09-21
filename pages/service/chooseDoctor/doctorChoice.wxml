@@ -1,0 +1,8 @@
+<block wx:for="{{ doctors }}">
+  <view>
+    <text>X Doctor</text>
+    <text>Some masage</text>
+    <navigator url="../doctor/doctorDetail">Detail</navigator>
+  </view>
+  <text>\n</text>
+</block>

@@ -1,0 +1,17 @@
+<button bindtap="switchStatus">切换状态</button>
+
+<view wx:if="{{ status == 1 }}">
+  <text>检测到您还未添加医生</text>
+  <button bindtap="moveTo">Add Doctor</button>
+</view>
+
+<view wx:if="{{ status == 2 }}">
+  <block wx:for="{{ doctors }}">
+    <view>
+      <text>X Doctor</text>
+      <text>Some masage</text>
+      <navigator url="doctor/chat">Chat</navigator>
+    </view>
+    <text>\n</text>
+  </block>
+</view>

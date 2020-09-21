@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/course/main",
+    "pages/course/calendar/calendar",
+    "pages/mail/mail",
+    "pages/me/me",
+    "pages/service/service",
+    "pages/course/courseDetail/detail",
+    "pages/course/courseDetail/actionDetail",
+    "pages/course/courseDetail/video",
+    "pages/service/doctor/doctorDetail",
+    "pages/service/doctor/chat",
+    "pages/service/chooseDoctor/doctorChoice",
+    "pages/mail/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/course/main",
+        "text": "课程"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "问诊"
+      },
+      {
+        "pagePath": "pages/mail/mail",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

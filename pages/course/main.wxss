@@ -1,0 +1,4 @@
+.layoutHorizontal {
+  display: flex;
+  flex-direction: row;
+}

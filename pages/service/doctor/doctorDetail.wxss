@@ -1,0 +1,4 @@
+.Box {
+  background: gray;
+  height: 300px;
+}

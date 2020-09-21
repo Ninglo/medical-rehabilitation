@@ -1,0 +1,10 @@
+<view>
+    <text>X Doctor</text>
+    <text>Some Introduction.</text>
+</view>
+<text>\n</text>
+<view class="Box">
+    ...
+</view>
+<text>\n</text>
+<button bindtap="moveTo">Add and Chat</button>
